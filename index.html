@@ -536,7 +536,8 @@ footer { background: #162D4A; color: rgba(255,255,255,.45); padding: 32px 0; fon
         <div class="detail-block">
           <div class="detail-ligne"><span>Surface</span><b id="b_surf">—</b></div>
           <div class="detail-ligne"><span>Poids</span><b id="b_pds">—</b></div>
-          <div class="detail-ligne" style="font-weight:700"><span>Total HT</span><b id="b_tot">—</b></div>
+          <div class="detail-ligne"><span>Livraison forfait</span><b id="b_livraison">—</b></div>
+          <div class="detail-ligne" style="font-weight:700"><span>Total HT (hors livraison)</span><b id="b_tot">—</b></div>
         </div>
 
         <button class="btn-panier" id="btn_add">Ajouter au panier</button>
@@ -907,7 +908,10 @@ function showMatInfo(){
   const m = mat();
   const box = $("mat-info-box");
   if(!m){ box.classList.remove("show"); return; }
-  $("mat-info-text").textContent = m.laserInfo;
+  const dimInfo = m.marine
+    ? " · Format max : 1000 × 1500 mm · Livraison 70 € HT · Limite 30 kg"
+    : " · Format max : 1000 × 1000 mm · Livraison 30 € HT · Limite 15 kg";
+  $("mat-info-text").textContent = m.laserInfo + dimInfo;
   const chips = [
     {label:"Laser CO2", ok: m.laser},
     {label:"CNC / fraisage", ok: m.cut.includes("cnc")},
@@ -919,10 +923,13 @@ function showMatInfo(){
   ).join("");
   box.classList.add("show");
 }
+function isMarine(){ const m = mat(); return m && m.marine === true; }
 function limits(){
   const p = proc();
-  const maxL = p==="print"||p==="both" ? 420 : 1000;
-  const maxW = p==="print"||p==="both" ? 330 : 1000;
+  const marine = isMarine();
+  // Plexi marine : 1000×1500mm max. Impression UV : 420×330mm. Autres : 1000×1000mm
+  const maxL = (p==="print"||p==="both") ? 420 : 1000;
+  const maxW = (p==="print"||p==="both") ? 330 : marine ? 1500 : 1000;
   ["f_L","n_L"].forEach(i => $(i).max = maxL);
   ["f_W","n_W"].forEach(i => $(i).max = maxW);
   if(+$("f_L").value > maxL){ $("f_L").value = maxL; $("n_L").value = maxL; }
@@ -983,7 +990,13 @@ function calc(){
   const rem = q>=50?.28:q>=25?.20:q>=10?.14:q>=5?.07:0;
   const forf = PARAM.forfait/(q>=5?Math.min(q/2,5):1);
   const pu = cMat+(cCut+cPrint)*(1-rem)+cInk+cFin+forf;
+  const marine = m.marine === true;
   const tot = pu*q, poids = surf*(ep/1000)*m.dens*q;
+
+  // Livraison forfaitaire : 70€ HT marine, 30€ HT standard
+  const livraisonHT = marine ? 70 : 30;
+  // Limite poids : 30kg marine, 15kg standard
+  const poidsMax = marine ? 30 : 15;
 
   $("p_ht").innerHTML = pu.toFixed(2).replace(".",",")+" €<small> HT / pièce</small>";
   $("p_ttc").textContent = (pu*PARAM.tva).toFixed(2).replace(".",",")+" € TTC"+(rem?"  ·  remise "+Math.round(rem*100)+" % appliquée":"");
@@ -996,11 +1009,14 @@ function calc(){
   $("b_surf").textContent = surfR.toFixed(3)+" m²";
   $("b_pds").textContent = poids.toFixed(2)+" kg";
   $("b_tot").textContent = tot.toFixed(2)+" €";
-  $("b_delai").textContent = (p==="cut"?"Fabrication 48 h":"Fabrication 72 h")+" · expédition France entière";
+  $("b_livraison").textContent = livraisonHT.toFixed(2)+" € HT";
+  $("b_delai").textContent = (p==="cut"?"Fabrication 48 h":"Fabrication 72 h")
+    +" · livraison "+(marine?"70 € HT — emballage renforcé nautisme":"30 € HT");
 
   const n = $("p_notice"); let msg="", stop=false;
   const ratio = Math.max(L,W)/Math.min(L,W);
-  if(ratio>20){ msg="Ratio "+ratio.toFixed(0)+":1 — trop élancé. Demandez-nous un devis."; stop=true; }
+  if(poids > poidsMax){ msg="Poids total "+poids.toFixed(1)+" kg dépasse la limite de "+poidsMax+" kg par commande"+(marine?" (nautisme)":" (standard"+(marine?"":"")+").")+". Fractionnez votre commande."; stop=true; }
+  else if(ratio>20){ msg="Ratio "+ratio.toFixed(0)+":1 — trop élancé. Demandez-nous un devis."; stop=true; }
   else if(p!=="cut" && m.blanc && !$("o_blanc").checked){ msg="Support foncé ou transparent : sans fond blanc, les couleurs seront ternes."; }
   else if(p!=="cut" && (L>420||W>330)){ msg="Le plateau d'impression fait 420 × 330 mm. Au-delà, passez en découpe seule."; }
   else if(surfR<0.03){ msg="Surface inférieure au minimum facturé de 0,03 m²."; }
