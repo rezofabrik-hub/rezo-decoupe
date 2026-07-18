@@ -3,247 +3,316 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rezo Découpe — Panneaux sur mesure, découpe et impression UV · Canet-en-Roussillon</title>
+<title>Rezo Découpe — Panneaux sur mesure · Canet-en-Roussillon</title>
 <meta name="description" content="Panneaux sur mesure découpés dans notre atelier de Canet-en-Roussillon. PVC, alu composite, plexi, polycarbonate, bois. Découpe, laser, impression UV. Livraison France entière.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ink:#16191C;
-  --slate:#3A4247;
-  --mist:#7C868C;
-  --line:#D8DCDA;
-  --paper:#EFF1F0;
-  --card:#FFFFFF;
-  --signal:#F2B705;
-  --deep:#16463F;
-  --danger:#A32D2D;
-  --r:4px;
-  --display:'Bricolage Grotesque',system-ui,sans-serif;
-  --body:'Inter',system-ui,sans-serif;
-  --mono:'JetBrains Mono',ui-monospace,monospace;
+:root {
+  --vert-fonce:  #2D6A4F;
+  --vert-moyen:  #40916C;
+  --vert-clair:  #D8F3DC;
+  --vert-pale:   #F0FAF2;
+  --marron:      #7A4928;
+  --marron-clair:#F5ECD7;
+  --blanc:       #FFFFFF;
+  --fond:        #F8F6F2;
+  --texte:       #1A1A1A;
+  --texte-doux:  #5A5A5A;
+  --bordure:     #D9D4CB;
+  --r: 8px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:var(--display);font-weight:800;letter-spacing:-0.02em;line-height:1.05}
-h1{font-size:clamp(38px,6vw,76px)}
-h2{font-size:clamp(28px,3.6vw,44px)}
-h3{font-size:20px;font-weight:600;letter-spacing:-0.01em}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--mist)}
-a{color:inherit}
 
-/* ---------- header ---------- */
-header{position:sticky;top:0;z-index:50;background:rgba(239,241,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.hd{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-0.03em;text-decoration:none;display:flex;align-items:center;gap:9px}
-.logo i{width:13px;height:13px;background:var(--signal);display:block;transform:rotate(45deg)}
-nav{display:flex;gap:26px;font-size:14px}
-nav a{text-decoration:none;color:var(--slate)}
-nav a:hover{color:var(--ink)}
-.hd .cta{background:var(--ink);color:#fff;padding:9px 16px;border-radius:var(--r);font-size:14px;text-decoration:none;font-weight:500}
-@media(max-width:860px){nav{display:none}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--fond); color: var(--texte); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-/* ---------- hero ---------- */
-.hero{padding:76px 0 64px;border-bottom:1px solid var(--line)}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:36px}}
-.hero h1 span{color:var(--deep)}
-.lede{font-size:19px;color:var(--slate);max-width:52ch;margin-top:22px}
-.hero-cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 22px;border-radius:var(--r);text-decoration:none;font-weight:500;font-size:15px;border:1px solid var(--ink);transition:.15s}
-.btn-solid{background:var(--ink);color:#fff}
-.btn-solid:hover{background:var(--deep);border-color:var(--deep)}
-.btn-ghost{background:transparent;color:var(--ink)}
-.btn-ghost:hover{background:#fff}
-.facts{display:flex;gap:30px;margin-top:38px;flex-wrap:wrap}
-.fact b{display:block;font-family:var(--mono);font-size:24px;font-weight:500}
-.fact span{font-size:13px;color:var(--mist)}
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* stack visuel */
-.stack{position:relative;height:330px}
-.slab{position:absolute;left:0;right:0;height:44px;border-radius:3px;border:1px solid rgba(0,0,0,.14);display:flex;align-items:center;padding:0 16px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;transition:transform .35s cubic-bezier(.2,.8,.3,1)}
-.slab:hover{transform:translateX(-14px)}
-.slab:nth-child(1){top:0;background:#F7F7F5;color:#5C5C57}
-.slab:nth-child(2){top:52px;background:#1F1F1F;color:#CFCFCB}
-.slab:nth-child(3){top:104px;background:#D8DDE0;color:#41494F}
-.slab:nth-child(4){top:156px;background:#E7E4DC;color:#5A5347}
-.slab:nth-child(5){top:208px;background:#B8C6C2;color:#22322E}
-.slab:nth-child(6){top:260px;background:var(--signal);color:#4A3800}
+h1 { font-size: clamp(32px, 5vw, 58px); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+h2 { font-size: clamp(24px, 3vw, 38px); font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
+h3 { font-size: 18px; font-weight: 600; }
+a { color: inherit; }
+label { cursor: pointer; }
 
-/* ---------- sections ---------- */
-section{padding:76px 0;border-bottom:1px solid var(--line)}
-.sec-head{max-width:62ch;margin-bottom:44px}
-.sec-head p{color:var(--slate);margin-top:14px}
+/* ─── HEADER ─── */
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--bordure);
+}
+.hd { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+.logo {
+  font-weight: 700; font-size: 17px; text-decoration: none;
+  color: var(--vert-fonce); display: flex; align-items: center; gap: 8px;
+}
+.logo-dot { width: 10px; height: 10px; background: var(--marron); border-radius: 50%; }
+nav { display: flex; gap: 22px; font-size: 14px; }
+nav a { text-decoration: none; color: var(--texte-doux); font-weight: 500; }
+nav a:hover { color: var(--vert-fonce); }
+.hd .cta-nav {
+  background: var(--vert-fonce); color: #fff;
+  padding: 9px 18px; border-radius: var(--r);
+  font-size: 14px; font-weight: 600; text-decoration: none;
+}
+.hd .cta-nav:hover { background: var(--vert-moyen); }
+@media(max-width:820px){ nav { display: none; } }
 
-/* ---------- configurateur ---------- */
-#configurateur{background:var(--ink);color:#EDEFEE;border-bottom:none}
-#configurateur h2{color:#fff}
-#configurateur .sec-head p{color:#A8B0B4}
-#configurateur .eyebrow{color:var(--signal)}
-.cfg{display:grid;grid-template-columns:1.25fr .75fr;gap:34px;align-items:start}
-@media(max-width:960px){.cfg{grid-template-columns:1fr}}
-.panelbox{background:#1D2124;border:1px solid #2C3236;border-radius:6px;padding:26px}
-.field{margin-bottom:20px}
-.field label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8D979C;margin-bottom:7px}
-select,input[type=number]{width:100%;background:#14181A;border:1px solid #333A3E;color:#EDEFEE;padding:11px 12px;border-radius:var(--r);font-family:var(--body);font-size:15px}
-select:focus,input:focus{outline:2px solid var(--signal);outline-offset:1px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media(max-width:620px){.row3{grid-template-columns:1fr}}
-input[type=range]{width:100%;accent-color:var(--signal);background:transparent}
-.dimval{font-family:var(--mono);font-size:13px;color:var(--signal)}
-.chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{border:1px solid #3A4246;background:#14181A;color:#C6CDD0;padding:9px 14px;border-radius:var(--r);font-size:14px;cursor:pointer;transition:.12s}
-.chip:hover{border-color:#5C666B}
-.chip[aria-pressed=true]{background:var(--signal);border-color:var(--signal);color:#3D2E00;font-weight:500}
-.opt{display:flex;align-items:center;gap:9px;font-size:14px;color:#C6CDD0;padding:6px 0;cursor:pointer}
-.opt input{accent-color:var(--signal);width:16px;height:16px}
+/* ─── HERO ─── */
+.hero { padding: 64px 0 56px; border-bottom: 1px solid var(--bordure); }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+@media(max-width:860px){ .hero-grid { grid-template-columns: 1fr; gap: 32px; } }
 
-/* preview */
-.preview{background:#14181A;border:1px solid #2C3236;border-radius:6px;padding:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:230px}
-#shape{border:1px solid rgba(255,255,255,.28);position:relative;transition:.2s;max-width:100%}
-.dimlbl{font-family:var(--mono);font-size:11px;color:#8D979C;margin-top:12px;letter-spacing:.06em}
+.hero-tag { display: inline-block; background: var(--vert-clair); color: var(--vert-fonce); font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 18px; }
+.hero h1 { color: var(--texte); }
+.hero h1 em { color: var(--vert-fonce); font-style: normal; }
+.hero-desc { font-size: 17px; color: var(--texte-doux); margin-top: 18px; line-height: 1.7; }
+.hero-btns { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 12px 22px; border-radius: var(--r); text-decoration: none; font-weight: 600; font-size: 15px; border: 2px solid transparent; transition: .15s; cursor: pointer; font-family: inherit; }
+.btn-vert { background: var(--vert-fonce); color: #fff; border-color: var(--vert-fonce); }
+.btn-vert:hover { background: var(--vert-moyen); border-color: var(--vert-moyen); }
+.btn-contour { background: transparent; color: var(--vert-fonce); border-color: var(--vert-fonce); }
+.btn-contour:hover { background: var(--vert-pale); }
+
+.hero-stats { display: flex; gap: 28px; margin-top: 32px; flex-wrap: wrap; }
+.stat { background: var(--blanc); border: 1px solid var(--bordure); border-radius: var(--r); padding: 14px 18px; }
+.stat b { display: block; font-size: 22px; font-weight: 700; color: var(--vert-fonce); }
+.stat span { font-size: 12px; color: var(--texte-doux); }
+
+/* matières visuelles côté hero */
+.hero-visuels { display: flex; flex-direction: column; gap: 8px; }
+.slab {
+  height: 48px; border-radius: 6px; border: 1px solid rgba(0,0,0,.1);
+  display: flex; align-items: center; padding: 0 16px;
+  font-size: 13px; font-weight: 500; color: var(--texte);
+  transition: transform .25s;
+}
+.slab:hover { transform: translateX(-10px); }
+
+/* ─── SECTIONS ─── */
+section { padding: 64px 0; border-bottom: 1px solid var(--bordure); }
+.sec-intro { margin-bottom: 40px; }
+.sec-intro .tag { display: inline-block; background: var(--marron-clair); color: var(--marron); font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.sec-intro p { color: var(--texte-doux); margin-top: 10px; max-width: 60ch; font-size: 15px; }
+
+/* ─── CONFIGURATEUR ─── */
+#configurateur { background: var(--vert-fonce); color: #fff; border-bottom: none; }
+#configurateur .sec-intro .tag { background: rgba(255,255,255,.15); color: #fff; }
+#configurateur h2 { color: #fff; }
+#configurateur .sec-intro p { color: rgba(255,255,255,.75); }
+
+.cfg { display: grid; grid-template-columns: 1.3fr .7fr; gap: 28px; align-items: start; }
+@media(max-width:920px){ .cfg { grid-template-columns: 1fr; } }
+
+.panelbox { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); border-radius: 10px; padding: 24px; }
+.field { margin-bottom: 18px; }
+.field:last-child { margin-bottom: 0; }
+.field label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.6); margin-bottom: 6px; }
+select, input[type=number] {
+  width: 100%; background: rgba(0,0,0,.25); border: 1px solid rgba(255,255,255,.2);
+  color: #fff; padding: 10px 12px; border-radius: 6px;
+  font-family: inherit; font-size: 15px;
+}
+select:focus, input:focus { outline: 2px solid rgba(255,255,255,.5); outline-offset: 1px; }
+
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.row3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+@media(max-width:580px){ .row3 { grid-template-columns: 1fr 1fr; } }
+
+input[type=range] { width: 100%; accent-color: #74C69D; background: transparent; }
+.dimval { color: #74C69D; font-weight: 600; font-size: 13px; }
+
+.chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  border: 1px solid rgba(255,255,255,.25); background: rgba(0,0,0,.2);
+  color: rgba(255,255,255,.8); padding: 8px 14px; border-radius: 6px;
+  font-size: 14px; cursor: pointer; transition: .12s; font-family: inherit;
+}
+.chip:hover { border-color: rgba(255,255,255,.5); }
+.chip[aria-pressed=true] { background: var(--marron); border-color: var(--marron); color: #fff; font-weight: 600; }
+
+.opt { display: flex; align-items: center; gap: 9px; font-size: 14px; color: rgba(255,255,255,.8); padding: 5px 0; cursor: pointer; }
+.opt input { accent-color: #74C69D; width: 16px; height: 16px; }
+
+.preview {
+  background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10px; padding: 20px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 180px;
+  margin-top: 16px;
+}
+#shape { border: 1px solid rgba(255,255,255,.3); position: relative; transition: .2s; max-width: 100%; }
+.dimlbl { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 10px; }
 
 /* prix */
-.price{background:#1D2124;border:1px solid #2C3236;border-radius:6px;padding:26px;position:sticky;top:88px}
-.bigprice{font-family:var(--display);font-size:46px;font-weight:800;letter-spacing:-0.03em;line-height:1}
-.bigprice small{font-size:15px;font-weight:400;color:#8D979C;font-family:var(--body);letter-spacing:0}
-.ttc{font-family:var(--mono);font-size:13px;color:#8D979C;margin-top:6px}
-.brk{margin:20px 0;border-top:1px solid #2C3236;padding-top:16px}
-.brk div{display:flex;justify-content:space-between;font-size:13.5px;padding:4px 0;color:#A8B0B4}
-.brk div b{color:#EDEFEE;font-family:var(--mono);font-weight:400}
-.notice{border-left:2px solid var(--signal);background:#241F0A;color:#F0D68A;padding:11px 13px;font-size:13px;border-radius:0 var(--r) var(--r) 0;margin:16px 0;display:none}
-.notice.stop{border-color:#E06666;background:#2A1616;color:#F0AFAF}
-.addcart{width:100%;background:var(--signal);color:#3D2E00;border:none;padding:15px;border-radius:var(--r);font-weight:600;font-size:15px;cursor:pointer;font-family:var(--body)}
-.addcart:hover{background:#FFC91A}
-.addcart:disabled{background:#3A4246;color:#7C868C;cursor:not-allowed}
-.delai{font-size:13px;color:#8D979C;text-align:center;margin-top:12px}
+.price { background: var(--blanc); border-radius: 10px; padding: 24px; position: sticky; top: 80px; color: var(--texte); }
+.bigprice { font-size: 42px; font-weight: 700; line-height: 1; color: var(--vert-fonce); margin: 6px 0 2px; }
+.bigprice small { font-size: 14px; font-weight: 400; color: var(--texte-doux); }
+.ttc { font-size: 13px; color: var(--texte-doux); }
+.price-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--texte-doux); }
+.brk { margin: 16px 0; border-top: 1px solid var(--bordure); padding-top: 14px; }
+.brk div { display: flex; justify-content: space-between; font-size: 13.5px; padding: 3px 0; color: var(--texte-doux); }
+.brk div b { color: var(--texte); font-weight: 600; }
 
-/* ---------- matières ---------- */
-.matgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
-.mat{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
-.swatch{height:88px;position:relative}
-.swatch span{position:absolute;bottom:9px;left:13px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:rgba(22,25,28,.82);color:#fff;padding:3px 8px;border-radius:2px}
-.mat-body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}
-.mat-body h3{margin-bottom:6px}
-.mat-body p{font-size:14px;color:var(--slate);flex:1}
-.spec{font-family:var(--mono);font-size:12px;color:var(--mist);margin-top:14px;line-height:1.9}
-.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
-.tag{font-size:11.5px;font-family:var(--mono);letter-spacing:.04em;padding:4px 8px;border-radius:2px;border:1px solid var(--line);color:var(--slate)}
-.tag.on{background:var(--deep);border-color:var(--deep);color:#fff}
-.tag.no{color:#B4A0A0;border-color:#E3D3D3;text-decoration:line-through}
+.notice { border-left: 3px solid var(--marron); background: var(--marron-clair); color: var(--marron); padding: 10px 12px; font-size: 13px; border-radius: 0 6px 6px 0; margin: 12px 0; display: none; }
+.notice.stop { border-color: #C0392B; background: #FDECEA; color: #C0392B; }
 
-/* ---------- procédés ---------- */
-.proc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.proc>div{background:var(--card);padding:26px 24px}
-.proc h3{margin-bottom:4px}
-.proc .eyebrow{margin-bottom:14px;display:block}
-.proc p{font-size:14.5px;color:var(--slate)}
-.proc ul{margin-top:14px;padding-left:0;list-style:none;font-size:13.5px;color:var(--slate)}
-.proc li{padding:5px 0 5px 18px;position:relative}
-.proc li::before{content:"";position:absolute;left:0;top:13px;width:7px;height:7px;background:var(--signal);transform:rotate(45deg)}
+.addcart {
+  width: 100%; background: var(--vert-fonce); color: #fff;
+  border: none; padding: 14px; border-radius: var(--r);
+  font-weight: 700; font-size: 15px; cursor: pointer; font-family: inherit;
+  transition: .15s;
+}
+.addcart:hover { background: var(--vert-moyen); }
+.addcart:disabled { background: var(--bordure); color: var(--texte-doux); cursor: not-allowed; }
+.delai { font-size: 12px; color: var(--texte-doux); text-align: center; margin-top: 10px; }
 
-/* ---------- livraison / faq ---------- */
-.two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-@media(max-width:820px){.two{grid-template-columns:1fr;gap:34px}}
-.ship{border:1px solid var(--line);border-radius:6px;background:var(--card);overflow:hidden}
-.ship div{display:flex;justify-content:space-between;padding:15px 20px;border-bottom:1px solid var(--line);font-size:14.5px}
-.ship div:last-child{border:none}
-.ship b{font-family:var(--mono);font-weight:400}
-details{border-bottom:1px solid var(--line);padding:16px 0}
-summary{cursor:pointer;font-weight:500;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-family:var(--mono);color:var(--mist);font-size:20px}
-details[open] summary::after{content:"–"}
-details p{margin-top:12px;color:var(--slate);font-size:15px}
+/* ─── MATIÈRES ─── */
+.matgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.mat { background: var(--blanc); border: 1px solid var(--bordure); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+.swatch { height: 80px; position: relative; }
+.swatch span {
+  position: absolute; bottom: 8px; left: 12px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em;
+  background: rgba(0,0,0,.55); color: #fff; padding: 3px 8px; border-radius: 4px;
+}
+.mat-body { padding: 16px 18px 18px; flex: 1; display: flex; flex-direction: column; }
+.mat-body h3 { margin-bottom: 6px; font-size: 16px; }
+.mat-body p { font-size: 13.5px; color: var(--texte-doux); flex: 1; line-height: 1.6; }
+.spec { font-size: 12px; color: var(--texte-doux); margin-top: 12px; line-height: 1.8; }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+.tag { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px; border: 1px solid var(--bordure); color: var(--texte-doux); }
+.tag.on { background: var(--vert-clair); border-color: var(--vert-moyen); color: var(--vert-fonce); }
+.tag.no { color: #ccc; border-color: #eee; text-decoration: line-through; }
 
-/* ---------- footer ---------- */
-footer{background:var(--ink);color:#98A1A6;padding:56px 0 34px;font-size:14px}
-.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
-@media(max-width:760px){.fgrid{grid-template-columns:1fr;gap:28px}}
-footer h4{color:#fff;font-family:var(--display);font-size:15px;margin-bottom:12px;font-weight:600}
-footer a{color:#98A1A6;text-decoration:none;display:block;padding:3px 0}
-footer a:hover{color:var(--signal)}
-.legal{border-top:1px solid #2C3236;padding-top:22px;font-size:12.5px;font-family:var(--mono);color:#6B757A}
-/* ---------- panier ---------- */
-#panier{background:var(--card)}
-.cart-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:34px;align-items:start}
-@media(max-width:900px){.cart-grid{grid-template-columns:1fr}}
-.cart-list{border:1px solid var(--line);border-radius:6px;overflow:hidden}
-.cart-empty{padding:44px 24px;text-align:center;color:var(--mist);font-size:15px}
-.line{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
-.line:last-child{border:none}
-.line h4{font-size:15px;font-weight:600;margin-bottom:3px}
-.line .meta{font-family:var(--mono);font-size:12px;color:var(--mist)}
-.line .amt{font-family:var(--mono);font-size:15px}
-.line button{background:none;border:none;color:var(--mist);cursor:pointer;font-size:19px;line-height:1;padding:4px 6px}
-.line button:hover{color:var(--danger)}
-.totals{border:1px solid var(--line);border-radius:6px;padding:22px;background:var(--paper)}
-.totals div{display:flex;justify-content:space-between;padding:6px 0;font-size:14.5px}
-.totals .grand{border-top:1px solid var(--line);margin-top:10px;padding-top:14px;font-family:var(--display);font-size:24px;font-weight:800}
-.totals input,.totals textarea,.totals select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:var(--r);font-family:var(--body);font-size:14.5px;margin-top:10px;background:#fff;color:var(--ink)}
-.totals textarea{min-height:78px;resize:vertical}
-.send{width:100%;margin-top:14px;background:var(--ink);color:#fff;border:none;padding:15px;border-radius:var(--r);font-weight:600;font-size:15px;cursor:pointer;font-family:var(--body)}
-.send:hover{background:var(--deep)}
-.send:disabled{background:var(--line);color:var(--mist);cursor:not-allowed}
-.sent{display:none;background:#E8F2ED;border:1px solid #B7D7C8;color:#16463F;padding:14px;border-radius:var(--r);font-size:14px;margin-top:14px}
-:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+/* ─── PROCÉDÉS ─── */
+.proc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.proc-card { background: var(--blanc); border: 1px solid var(--bordure); border-radius: 10px; padding: 24px; }
+.proc-card .tag { margin-bottom: 12px; display: inline-block; }
+.proc-card h3 { margin-bottom: 8px; }
+.proc-card p { font-size: 14px; color: var(--texte-doux); line-height: 1.6; }
+.proc-card ul { margin-top: 14px; list-style: none; }
+.proc-card li { font-size: 13.5px; color: var(--texte-doux); padding: 4px 0 4px 20px; position: relative; }
+.proc-card li::before { content: ""; position: absolute; left: 0; top: 12px; width: 8px; height: 8px; background: var(--vert-moyen); border-radius: 50%; }
+
+/* ─── LIVRAISON / FAQ ─── */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+@media(max-width:780px){ .two { grid-template-columns: 1fr; gap: 28px; } }
+
+.ship { background: var(--blanc); border: 1px solid var(--bordure); border-radius: 10px; overflow: hidden; }
+.ship div { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--bordure); font-size: 14.5px; }
+.ship div:last-child { border: none; }
+.ship b { font-weight: 700; color: var(--vert-fonce); }
+
+details { border-bottom: 1px solid var(--bordure); padding: 14px 0; }
+summary { cursor: pointer; font-weight: 600; font-size: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--texte); }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--vert-fonce); font-size: 22px; font-weight: 300; }
+details[open] summary::after { content: "–"; }
+details p { margin-top: 10px; color: var(--texte-doux); font-size: 14.5px; line-height: 1.7; }
+
+/* ─── PANIER ─── */
+#panier { background: var(--blanc); }
+.cart-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 28px; align-items: start; }
+@media(max-width:860px){ .cart-grid { grid-template-columns: 1fr; } }
+.cart-list { border: 1px solid var(--bordure); border-radius: 10px; overflow: hidden; background: var(--fond); }
+.cart-empty { padding: 40px 24px; text-align: center; color: var(--texte-doux); font-size: 15px; }
+.line { display: grid; grid-template-columns: 1fr auto auto; gap: 14px; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--bordure); background: var(--blanc); }
+.line:last-child { border: none; }
+.line h4 { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.line .meta { font-size: 12px; color: var(--texte-doux); }
+.line .amt { font-weight: 700; font-size: 15px; color: var(--vert-fonce); }
+.line button { background: none; border: none; color: var(--texte-doux); cursor: pointer; font-size: 18px; padding: 4px 6px; }
+.line button:hover { color: #C0392B; }
+
+.totals { background: var(--fond); border: 1px solid var(--bordure); border-radius: 10px; padding: 22px; }
+.totals div { display: flex; justify-content: space-between; padding: 5px 0; font-size: 14px; }
+.totals .grand { border-top: 2px solid var(--vert-fonce); margin-top: 10px; padding-top: 12px; font-size: 22px; font-weight: 700; color: var(--vert-fonce); }
+.totals input, .totals textarea, .totals select {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--bordure);
+  border-radius: 6px; font-family: inherit; font-size: 14.5px;
+  margin-top: 8px; background: var(--blanc); color: var(--texte);
+}
+.totals textarea { min-height: 76px; resize: vertical; }
+.send {
+  width: 100%; margin-top: 12px; background: var(--vert-fonce); color: #fff;
+  border: none; padding: 14px; border-radius: var(--r);
+  font-weight: 700; font-size: 15px; cursor: pointer; font-family: inherit; transition: .15s;
+}
+.send:hover { background: var(--vert-moyen); }
+.send:disabled { background: var(--bordure); color: var(--texte-doux); cursor: not-allowed; }
+.sent { display: none; background: var(--vert-clair); border: 1px solid var(--vert-moyen); color: var(--vert-fonce); padding: 14px; border-radius: var(--r); font-size: 14px; margin-top: 12px; line-height: 1.6; }
+
+/* ─── FOOTER ─── */
+footer { background: var(--vert-fonce); color: rgba(255,255,255,.7); padding: 48px 0 28px; font-size: 14px; }
+.fgrid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; margin-bottom: 36px; }
+@media(max-width:700px){ .fgrid { grid-template-columns: 1fr; gap: 24px; } }
+footer h4 { color: #fff; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+footer a { color: rgba(255,255,255,.65); text-decoration: none; display: block; padding: 3px 0; }
+footer a:hover { color: #fff; }
+.footer-logo { color: #fff; font-weight: 700; font-size: 17px; text-decoration: none; display: block; margin-bottom: 12px; }
+.legal { border-top: 1px solid rgba(255,255,255,.12); padding-top: 18px; font-size: 12px; color: rgba(255,255,255,.4); }
+
+:focus-visible { outline: 2px solid var(--vert-moyen); outline-offset: 2px; }
+@media(prefers-reduced-motion:reduce){ *{ transition: none !important; scroll-behavior: auto; } }
 </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="wrap hd">
-    <a class="logo" href="#"><i></i>REZO DÉCOUPE</a>
+    <a class="logo" href="#">
+      <span class="logo-dot"></span>
+      REZO DÉCOUPE
+    </a>
     <nav>
       <a href="#configurateur">Configurateur</a>
       <a href="#matieres">Matières</a>
       <a href="#procedes">Procédés</a>
       <a href="#panier">Panier</a>
       <a href="#livraison">Livraison</a>
-      <a href="#faq">Questions</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="cta" href="#configurateur">Configurer un panneau</a>
+    <a class="cta-nav" href="#configurateur">Configurer un panneau</a>
   </div>
 </header>
 
+<!-- HERO -->
 <div class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Atelier de découpe · Canet-en-Roussillon</span>
-      <h1>Votre panneau, <span>à vos cotes</span>, découpé chez nous.</h1>
-      <p class="lede">PVC, alu composite, plexi, polycarbonate, bois. Découpe numérique au millimètre, impression UV directe, expédition dans toute la France. Une bonne partie de nos panneaux vient des chutes de notre propre atelier — même matière, même qualité, moins de gâchis.</p>
-      <div class="hero-cta">
-        <a class="btn btn-solid" href="#configurateur">Configurer et voir le prix</a>
-        <a class="btn btn-ghost" href="#matieres">Comparer les matières</a>
+      <span class="hero-tag">Atelier de découpe · Canet-en-Roussillon</span>
+      <h1>Votre panneau,<br><em>à vos cotes</em>, découpé chez nous.</h1>
+      <p class="hero-desc">PVC, alu composite, plexi, polycarbonate, bois. Découpe numérique au millimètre, impression UV directe, expédition dans toute la France.</p>
+      <div class="hero-btns">
+        <a class="btn btn-vert" href="#configurateur">Configurer et voir le prix</a>
+        <a class="btn btn-contour" href="#matieres">Comparer les matières</a>
       </div>
-      <div class="facts">
-        <div class="fact"><b>10–1000</b><span>mm sur chaque côté</span></div>
-        <div class="fact"><b>± 0,3</b><span>mm de tolérance</span></div>
-        <div class="fact"><b>48 h</b><span>fabrication moyenne</span></div>
+      <div class="hero-stats">
+        <div class="stat"><b>10–1000</b><span>mm sur chaque côté</span></div>
+        <div class="stat"><b>± 0,3 mm</b><span>de tolérance</span></div>
+        <div class="stat"><b>48 h</b><span>fabrication moyenne</span></div>
       </div>
     </div>
-    <div class="stack" aria-hidden="true">
-      <div class="slab">PVC expansé blanc</div>
-      <div class="slab">PVC expansé noir</div>
-      <div class="slab">Alu composite</div>
-      <div class="slab">Décor bois</div>
-      <div class="slab">Plexi diffusant</div>
-      <div class="slab">Impression UV</div>
+    <div class="hero-visuels" aria-hidden="true">
+      <div class="slab" style="background:#F5F5F2;color:#555">PVC expansé blanc</div>
+      <div class="slab" style="background:#1C1C1C;color:#ccc">PVC expansé noir</div>
+      <div class="slab" style="background:#D8DDE0;color:#444">Alu composite</div>
+      <div class="slab" style="background:#E7E4DC;color:#5A5347">Décor bois</div>
+      <div class="slab" style="background:#B8C6C2;color:#22322E">Plexi diffusant</div>
+      <div class="slab" style="background:var(--marron-clair);color:var(--marron)">Impression UV</div>
     </div>
   </div>
 </div>
 
+<!-- CONFIGURATEUR -->
 <section id="configurateur">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Configurateur</span>
+    <div class="sec-intro">
+      <span class="tag">Configurateur</span>
       <h2>Choisissez, mesurez, commandez.</h2>
-      <p>Le prix se met à jour à chaque changement. Les dimensions maximales s'adaptent au procédé : l'impression UV se fait sur un plateau A3+, la découpe va bien au-delà.</p>
+      <p>Le prix se met à jour à chaque changement. Les dimensions maximales s'adaptent au procédé choisi.</p>
     </div>
 
     <div class="cfg">
@@ -253,14 +322,14 @@ footer a:hover{color:var(--signal)}
             <label for="f_proc">Ce que vous voulez</label>
             <select id="f_proc">
               <option value="cut">Découpe seule</option>
-              <option value="print">Impression UV seule (format fini fourni par nous)</option>
+              <option value="print">Impression UV seule (format fourni par nous)</option>
               <option value="both">Découpe + impression UV</option>
             </select>
           </div>
 
           <div class="row2">
             <div class="field">
-              <label for="f_fam">Famille</label>
+              <label for="f_fam">Famille de matière</label>
               <select id="f_fam"></select>
             </div>
             <div class="field">
@@ -276,12 +345,12 @@ footer a:hover{color:var(--signal)}
 
           <div class="row2">
             <div class="field">
-              <label for="f_L">Longueur <span class="dimval" id="v_L">400 mm</span></label>
+              <label for="f_L">Longueur — <span class="dimval" id="v_L">400 mm</span></label>
               <input type="range" id="f_L" min="10" max="1000" step="1" value="400">
               <input type="number" id="n_L" min="10" max="1000" value="400" style="margin-top:8px">
             </div>
             <div class="field">
-              <label for="f_W">Largeur <span class="dimval" id="v_W">300 mm</span></label>
+              <label for="f_W">Largeur — <span class="dimval" id="v_W">300 mm</span></label>
               <input type="range" id="f_W" min="10" max="1000" step="1" value="300">
               <input type="number" id="n_W" min="10" max="1000" value="300" style="margin-top:8px">
             </div>
@@ -306,7 +375,7 @@ footer a:hover{color:var(--signal)}
               <input type="number" id="f_qte" min="1" max="500" value="1">
             </div>
             <div class="field" id="wrap_couv">
-              <label for="f_couv">Couverture <span class="dimval" id="v_couv">60 %</span></label>
+              <label for="f_couv">Couverture — <span class="dimval" id="v_couv">60 %</span></label>
               <input type="range" id="f_couv" min="10" max="100" step="5" value="60">
             </div>
           </div>
@@ -321,14 +390,14 @@ footer a:hover{color:var(--signal)}
           </div>
         </div>
 
-        <div class="preview" style="margin-top:20px">
+        <div class="preview">
           <div id="shape"></div>
           <div class="dimlbl" id="prevlbl"></div>
         </div>
       </div>
 
       <div class="price">
-        <span class="eyebrow" style="color:#8D979C">Votre panneau</span>
+        <div class="price-label">Votre panneau</div>
         <div class="bigprice" id="p_ht">—<small> HT</small></div>
         <div class="ttc" id="p_ttc"></div>
 
@@ -356,68 +425,68 @@ footer a:hover{color:var(--signal)}
   </div>
 </section>
 
+<!-- MATIÈRES -->
 <section id="matieres">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Matières</span>
+    <div class="sec-intro">
+      <span class="tag">Matières</span>
       <h2>Ce que chaque matière sait faire.</h2>
-      <p>Toutes se découpent dans notre atelier. Elles ne se comportent pas de la même façon selon le procédé : le laser ne touche ni le PVC ni l'aluminium, l'impression UV a besoin d'un fond blanc sur les supports foncés ou transparents.</p>
+      <p>Toutes se découpent dans notre atelier. Elles ne se comportent pas de la même façon selon le procédé.</p>
     </div>
     <div class="matgrid" id="matgrid"></div>
   </div>
 </section>
 
+<!-- PROCÉDÉS -->
 <section id="procedes">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Atelier</span>
+    <div class="sec-intro">
+      <span class="tag">Atelier</span>
       <h2>Trois procédés, trois usages.</h2>
-      <p>Le choix du procédé décide du format maximal, du délai et de la finition des chants. Voici comment nous répartissons le travail.</p>
+      <p>Le choix du procédé décide du format maximal, du délai et de la finition des chants.</p>
     </div>
-    <div class="proc">
-      <div>
-        <span class="eyebrow">Découpe numérique</span>
+    <div class="proc-grid">
+      <div class="proc-card">
+        <span class="tag on">Découpe numérique</span>
         <h3>Scie à format et fraisage CNC</h3>
-        <p>Le procédé qui accepte tout : PVC, alu composite, plexi, polycarbonate, bois. Chants nets, équerrage garanti, grands formats possibles.</p>
+        <p>Le procédé qui accepte tout : PVC, alu composite, plexi, polycarbonate, bois. Chants nets, grands formats possibles.</p>
         <ul>
-          <li>Jusqu'à 1000 mm de côté en ligne</li>
+          <li>Jusqu'à 1000 mm de côté</li>
           <li>Tolérance ± 0,3 mm</li>
           <li>Perçages et angles arrondis</li>
-          <li>Rectangles et formes simples</li>
         </ul>
       </div>
-      <div>
-        <span class="eyebrow">Découpe laser CO2</span>
+      <div class="proc-card">
+        <span class="tag on">Découpe laser CO2</span>
         <h3>Formes libres et chant poli</h3>
-        <p>Réservé au plexi et au bois. Le plexi ressort avec un chant transparent poli qu'aucune autre découpe ne donne. Formes complexes sans surcoût d'outillage.</p>
+        <p>Réservé au plexi et au bois. Le plexi ressort avec un chant transparent poli. Formes complexes sans surcoût.</p>
         <ul>
           <li>Plexi jusqu'à 10 mm, bois jusqu'à 18 mm</li>
           <li>Format maxi 600 × 308 mm</li>
           <li>Gravure sur la même passe</li>
-          <li>Jamais de PVC ni d'aluminium</li>
         </ul>
       </div>
-      <div>
-        <span class="eyebrow">Impression UV directe</span>
+      <div class="proc-card">
+        <span class="tag on">Impression UV directe</span>
         <h3>Couleur sur support rigide</h3>
-        <p>L'encre est déposée puis polymérisée sur le panneau. Séchage instantané, tenue extérieure, relief et vernis possibles.</p>
+        <p>L'encre est déposée puis polymérisée sur le panneau. Séchage instantané, tenue extérieure, vernis possible.</p>
         <ul>
           <li>Plateau A3+ : 420 × 330 mm</li>
-          <li>Fond blanc sur support foncé ou transparent</li>
+          <li>Fond blanc sur support foncé</li>
           <li>Vernis mat, brillant ou texturé</li>
-          <li>Recto-verso sur demande</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PANIER -->
 <section id="panier">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Panier</span>
+    <div class="sec-intro">
+      <span class="tag">Panier</span>
       <h2>Votre demande.</h2>
-      <p>Ajoutez autant de panneaux que nécessaire depuis le configurateur, puis envoyez-nous la demande. Nous confirmons la faisabilité et le transport sous 24 h ouvrées, avec le lien de paiement.</p>
+      <p>Ajoutez autant de panneaux que nécessaire, puis envoyez-nous la demande. Nous confirmons sous 24 h ouvrées.</p>
     </div>
     <div class="cart-grid">
       <div class="cart-list" id="cart-list"></div>
@@ -444,13 +513,16 @@ footer a:hover{color:var(--signal)}
   </div>
 </section>
 
+<!-- LIVRAISON -->
 <section id="livraison">
   <div class="wrap two">
     <div>
-      <span class="eyebrow">Livraison</span>
-      <h2 style="margin:10px 0 18px">France entière, emballage renforcé.</h2>
-      <p style="color:var(--slate)">Chaque panneau part avec ses films de protection, calé entre deux plaques de carton fort. Les grands formats voyagent à plat sur palette. Les tarifs ci-contre sont indicatifs et se calculent au poids réel au moment du panier.</p>
-      <p style="color:var(--slate);margin-top:16px">Retrait gratuit à l'atelier, ZA Las Bigues à Canet-en-Roussillon, du lundi au vendredi.</p>
+      <div class="sec-intro" style="margin-bottom:0">
+        <span class="tag">Livraison</span>
+        <h2 style="margin-top:10px">France entière, emballage renforcé.</h2>
+        <p style="margin-top:12px">Chaque panneau part avec ses films de protection, calé entre deux plaques de carton fort. Les grands formats voyagent à plat sur palette.</p>
+        <p style="margin-top:10px;color:var(--texte-doux);font-size:15px">Retrait gratuit à l'atelier, ZA Las Bigues à Canet-en-Roussillon, du lundi au vendredi.</p>
+      </div>
     </div>
     <div class="ship">
       <div><span>Colis jusqu'à 2 kg</span><b>6,90 € HT</b></div>
@@ -458,34 +530,38 @@ footer a:hover{color:var(--signal)}
       <div><span>10 à 30 kg</span><b>19,90 € HT</b></div>
       <div><span>Format long (&gt; 800 mm)</span><b>29,00 € HT</b></div>
       <div><span>Palette</span><b>sur devis</b></div>
-      <div><span>Retrait à l'atelier</span><b>gratuit</b></div>
+      <div><span>Retrait à l'atelier</span><b>Gratuit</b></div>
     </div>
   </div>
 </section>
 
+<!-- FAQ -->
 <section id="faq" style="border-bottom:none">
   <div class="wrap two">
     <div>
-      <span class="eyebrow">Questions</span>
-      <h2 style="margin:10px 0 18px">Ce qu'on nous demande le plus.</h2>
-      <p style="color:var(--slate)">Une question qui n'est pas là ? Écrivez-nous, on répond sous 24 h ouvrées.</p>
+      <div class="sec-intro" style="margin-bottom:0">
+        <span class="tag">Questions fréquentes</span>
+        <h2 style="margin-top:10px">Ce qu'on nous demande le plus.</h2>
+        <p style="margin-top:12px">Une question qui n'est pas là ? Écrivez-nous, on répond sous 24 h ouvrées.</p>
+      </div>
     </div>
     <div>
       <details open><summary>Quelle tolérance sur les cotes ?</summary><p>± 0,3 mm sur la découpe numérique, ± 0,1 mm au laser. Sur les panneaux très fins et très élancés, la tolérance peut atteindre ± 0,5 mm.</p></details>
-      <details><summary>Pourquoi le laser ne coupe-t-il pas le PVC ?</summary><p>En brûlant, le PVC libère du chlore qui corrode la machine et présente un risque pour l'opérateur. Nous le découpons donc uniquement mécaniquement, ce qui donne d'excellents chants sur cette matière.</p></details>
+      <details><summary>Pourquoi le laser ne coupe-t-il pas le PVC ?</summary><p>En brûlant, le PVC libère du chlore qui corrode la machine et présente un risque pour l'opérateur. Nous le découpons donc uniquement mécaniquement.</p></details>
       <details><summary>Puis-je faire imprimer un panneau plus grand que 420 mm ?</summary><p>Pas en une seule passe. Au-delà, nous passons par un raccord, ou par un adhésif imprimé contrecollé. Demandez-nous un devis.</p></details>
-      <details><summary>Que veut dire « issu de chutes » ?</summary><p>Une partie de nos panneaux est débitée dans des chutes de production, matière neuve et identique, simplement issue de plaques déjà entamées. Vous ne verrez aucune différence sur la pièce reçue.</p></details>
-      <details><summary>Puis-je annuler une commande ?</summary><p>Les articles fabriqués à vos dimensions ne sont pas repris : l'article L221-28 du Code de la consommation exclut le droit de rétractation sur les biens confectionnés sur mesure. Tant que la découpe n'a pas démarré, contactez-nous, on s'arrange.</p></details>
+      <details><summary>Que veut dire « issu de chutes » ?</summary><p>Une partie de nos panneaux est débitée dans des chutes de production, matière neuve et identique. Vous ne verrez aucune différence sur la pièce reçue.</p></details>
+      <details><summary>Puis-je annuler une commande ?</summary><p>Les articles fabriqués à vos dimensions ne sont pas repris : l'article L221-28 du Code de la consommation exclut le droit de rétractation sur les biens confectionnés sur mesure. Tant que la découpe n'a pas démarré, contactez-nous.</p></details>
       <details><summary>Livrez-vous les professionnels avec un compte ?</summary><p>Oui. Au-delà de 500 € HT par mois, nous ouvrons un compte avec grille dégressive et paiement à 30 jours. Écrivez-nous depuis votre adresse professionnelle.</p></details>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <a class="logo" href="#" style="color:#fff;margin-bottom:14px">REZO DÉCOUPE</a>
+        <a class="footer-logo" href="#">REZO DÉCOUPE</a>
         <p>9 rue de la Close — ZA Las Bigues<br>66140 Canet-en-Roussillon<br>04 68 92 11 92</p>
       </div>
       <div>
@@ -523,7 +599,6 @@ const CAT = [
  {f:"PVC expansé", id:"pvc_celluka", n:"Celluka et Coplast forte épaisseur", sw:"#F7F7F4", dens:700, cut:["scie","cnc"], print:1, laser:0, blanc:0,
   ep:{10:24.57,19:42.85,30:117.92},
   use:"Peau dure et compacte, jusqu'à 30 mm. Pour les plans de travail techniques, socles et pièces d'usinage."},
-
  {f:"Alu composite", id:"acp_eko", n:"Alu composite blanc éco", sw:"#F2F3F1", dens:1550, cut:["scie","cnc"], print:1, laser:0, blanc:0,
   ep:{3:12.45},
   use:"Deux peaux d'aluminium sur âme polyéthylène. Rigide, léger, tenue extérieure. Le meilleur rapport prix/rigidité pour une enseigne."},
@@ -535,7 +610,7 @@ const CAT = [
   use:"6 et 8 mm pour les grandes portées sans ondulation : bandeaux de façade, habillages, panneaux autoportants."},
  {f:"Alu composite", id:"acp_ral", n:"Alu composite teinté RAL", sw:"#2E5B8C", dens:1550, cut:["scie","cnc"], print:1, laser:0, blanc:1,
   ep:{3:18.96},
-  use:"Vingt-deux teintes RAL laquées dans la masse du film : bleus, verts, rouges, gris, ivoire, chocolat. Précisez la référence au panier."},
+  use:"Vingt-deux teintes RAL laquées dans la masse du film. Précisez la référence au panier."},
  {f:"Alu composite", id:"acp_brosse", n:"Alu composite brossé", sw:"#B9BDBE", dens:1550, cut:["scie","cnc"], print:1, laser:0, blanc:1,
   ep:{3:32.52},
   use:"Aspect métal brossé alu, cuivre, or, bronze ou noir. Très demandé pour les plaques professionnelles et la signalétique haut de gamme."},
@@ -544,26 +619,22 @@ const CAT = [
   use:"Effet miroir incassable, argent, or ou anthracite. Version garantie extérieur disponible. Ne s'imprime pas."},
  {f:"Alu composite", id:"acp_deco", n:"Alu composite décors", sw:"#9E7B4F", dens:1550, cut:["scie","cnc"], print:0, laser:0, blanc:0,
   ep:{3:28.74},
-  use:"Décors bois chêne, érable, wengé, effets béton, marbre, pierre, corten et surface tableau craie. Le rendu est imprimé sur le film, donc pas de surimpression."},
-
+  use:"Décors bois chêne, érable, wengé, effets béton, marbre, pierre, corten et surface tableau craie."},
  {f:"Plexi PMMA", id:"pmma_inco", n:"Plexi coulé incolore", sw:"#DCE8EA", dens:1190, cut:["scie","cnc","laser"], print:1, laser:1, blanc:1,
   ep:{3:18.90,4:23.45,5:29.31,6:30.66,8:46.90,10:58.62,12:70.34,15:97.47},
-  use:"Transparence parfaite, chant poli au laser. Vitrines, protections, présentoirs, garde-corps. La seule matière qui donne un chant brillant sans polissage."},
+  use:"Transparence parfaite, chant poli au laser. Vitrines, protections, présentoirs, garde-corps."},
  {f:"Plexi PMMA", id:"pmma_diff", n:"Plexi blanc diffusant", sw:"#F4F6F5", dens:1190, cut:["scie","cnc","laser"], print:1, laser:1, blanc:0,
   ep:{3:20.88,4:27.84,5:34.80,10:69.61},
   use:"Diffuse la lumière sans laisser voir la source. Enseignes lumineuses, caissons rétroéclairés, luminaires."},
-
  {f:"Supports légers", id:"akyprint", n:"PP Akyprint traité UV", sw:"#FBFBF9", dens:350, cut:["scie","cnc"], print:1, laser:0, blanc:0,
   ep:{3:5.01,5:8.67},
   use:"Polypropylène alvéolaire à surface préparée pour l'impression. Le support le moins cher pour un panneau de chantier ou un événement."},
  {f:"Supports légers", id:"viscom", n:"Viscom SF et Easyprint", sw:"#F6F7F5", dens:500, cut:["scie","cnc"], print:1, laser:0, blanc:0,
   ep:{5:15.18,10:19.96},
   use:"Mousse rigide légère, surface très lisse. Version classée feu M1 disponible pour les ERP."},
-
  {f:"Polycarbonate", id:"poly", n:"Polycarbonate compact", sw:"#E2EBE8", dens:1200, cut:["scie","cnc"], print:1, laser:0, blanc:1,
   ep:{2:26.00,3:34.00,4:44.00,5:54.00,6:64.00,8:86.00,10:106.00},
-  use:"Presque incassable, deux cents fois plus résistant que le verre. Protections machine, vitrages exposés, écrans anti-vandalisme. Ne se coupe jamais au laser : le chant jaunit."},
-
+  use:"Presque incassable, deux cents fois plus résistant que le verre. Protections machine, vitrages exposés, écrans anti-vandalisme."},
  {f:"Bois", id:"mdf", n:"MDF brut", sw:"#C39A63", dens:750, cut:["scie","cnc","laser"], print:1, laser:1, blanc:0,
   ep:{3:6.00,5:8.00,10:14.00,19:24.00},
   use:"Surface homogène, se grave magnifiquement au laser. Décoration intérieure, gabarits, PLV, lettrages."},
@@ -637,11 +708,11 @@ function calc(){
   $("n_L").value=L; $("n_W").value=W;
   $("v_couv").textContent=$("f_couv").value+" %";
 
-  const sh=$("shape"), sc=Math.min(210/Math.max(L,W),1.4);
+  const sh=$("shape"), sc=Math.min(160/Math.max(L,W),1.2);
   sh.style.width=Math.max(L*sc,8)+"px";
   sh.style.height=Math.max(W*sc,8)+"px";
-  sh.style.background=m?m.sw:"#333";
-  sh.style.borderRadius=forme==="rond"?"10px":(forme==="forme"?"22% 6% 22% 6%":"1px");
+  sh.style.background=m?m.sw:"#555";
+  sh.style.borderRadius=forme==="rond"?"10px":(forme==="forme"?"22% 6% 22% 6%":"2px");
   $("prevlbl").textContent=`${L} × ${W} mm${m?" · "+m.n:""}`;
 
   if(!m){$("p_ht").innerHTML="—<small> HT</small>";$("btn_add").disabled=true;return}
@@ -700,7 +771,7 @@ function calc(){
   if(ratio>20){msg="Ratio "+ratio.toFixed(0)+":1 — trop élancé pour un maintien correct pendant la découpe. Demandez-nous un devis.";stop=true}
   else if(p!=="cut" && m.blanc && !$("o_blanc").checked){msg="Support foncé, coloré ou transparent : sans fond blanc, les couleurs seront ternes ou translucides."}
   else if(p!=="cut" && (L>420||W>330)){msg="Le plateau d'impression fait 420 × 330 mm. Au-delà, passez en découpe seule ou demandez un devis."}
-  else if(forme==="forme" && !m.laser){msg="Forme libre sur cette matière : fraisage CNC, rayon intérieur mini 3 mm. Le laser est réservé au plexi et au bois."}
+  else if(forme==="forme" && !m.laser){msg="Forme libre sur cette matière : fraisage CNC, rayon intérieur mini 3 mm."}
   else if(surfR<0.03){msg="Surface inférieure au minimum facturé de 0,03 m². Le prix affiché est le minimum."}
   else if(m.f==="Polycarbonate"||m.f==="Bois"){msg="Tarif indicatif : cette matière n'est pas encore sous contrat fournisseur. À confirmer avant mise en ligne."}
   n.style.display=msg?"block":"none"; n.textContent=msg; n.className="notice"+(stop?" stop":"");
@@ -716,7 +787,7 @@ function renderMat(){
       <div class="mat-body">
         <h3>${m.n}</h3>
         <p>${m.use}</p>
-        <div class="spec">Épaisseurs · ${eps.join(" / ")} mm<br>Matière · ${pmin.toFixed(2)} à ${pmax.toFixed(2)} €/m²<br>Densité · ${m.dens} kg/m³</div>
+        <div class="spec">Épaisseurs : ${eps.join(" / ")} mm<br>Prix matière : ${pmin.toFixed(2)} à ${pmax.toFixed(2)} €/m²</div>
         <div class="tags">
           <span class="tag on">découpe numérique</span>
           <span class="tag ${m.laser?"on":"no"}">laser</span>
@@ -724,7 +795,8 @@ function renderMat(){
           ${m.blanc?'<span class="tag">fond blanc requis</span>':""}
         </div>
       </div>
-    </article>`}).join("");
+    </article>`;
+  }).join("");
 }
 
 $("f_proc").addEventListener("change",()=>{fillMat();limits();calc()});
@@ -737,11 +809,12 @@ $("n_W").addEventListener("input",e=>{$("f_W").value=e.target.value;calc()});
 $("ch_rect").onclick=()=>setForme("rect");
 $("ch_forme").onclick=()=>setForme("forme");
 $("ch_rond").onclick=()=>setForme("rond");
-/* ---------- panier ---------- */
-const FORM_ENDPOINT = "https://formspree.io/f/VOTRE_ID";  /* à remplacer, voir README */
+
+/* ─── PANIER ─── */
+const FORM_ENDPOINT = "https://formspree.io/f/VOTRE_ID";
 let cart = JSON.parse(localStorage.getItem("rf_cart") || "[]");
 
-function saveCart(){ localStorage.setItem("rf_cart", JSON.stringify(cart)); renderCart() }
+function saveCart(){ localStorage.setItem("rf_cart", JSON.stringify(cart)); renderCart(); }
 
 function renderCart(){
   const el=$("cart-list");
@@ -765,7 +838,7 @@ function renderCart(){
   $("btn_send").disabled=!cart.length;
   $("recap").value=cart.map(l=>`${l.q}× ${l.nom} ${l.ep}mm ${l.L}x${l.W}mm ${l.forme} ${l.proc} = ${l.total.toFixed(2)} EUR HT`).join(" | ")+` || TOTAL ${ht.toFixed(2)} EUR HT`;
 }
-function removeLine(i){ cart.splice(i,1); saveCart() }
+function removeLine(i){ cart.splice(i,1); saveCart(); }
 
 $("btn_add").onclick=()=>{
   const m=mat(); if(!m)return;
@@ -801,7 +874,6 @@ $("order").addEventListener("submit", async e=>{
 });
 
 renderCart();
-
 fillFam(); limits(); calc(); renderMat();
 </script>
 </body>
