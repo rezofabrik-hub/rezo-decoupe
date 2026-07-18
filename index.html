@@ -486,7 +486,6 @@ footer { background: #162D4A; color: rgba(255,255,255,.45); padding: 32px 0; fon
             <div class="step-label"><span class="step-num">5</span>Type de découpe</div>
             <div class="chips">
               <button class="chip" id="ch_rect" aria-pressed="true">Rectangle</button>
-              <button class="chip" id="ch_forme" aria-pressed="false">Forme libre</button>
               <button class="chip" id="ch_rond" aria-pressed="false">Angles arrondis</button>
             </div>
           </div>
@@ -1055,7 +1054,6 @@ function limits(){
 function setForme(f){
   forme = f;
   $("ch_rect").setAttribute("aria-pressed", f==="rect");
-  $("ch_forme").setAttribute("aria-pressed", f==="forme");
   $("ch_rond").setAttribute("aria-pressed", f==="rond");
   calc();
 }
@@ -1217,7 +1215,6 @@ $("f_ep").addEventListener("change", calc);
 $("n_L").addEventListener("input", e=>{ $("f_L").value=e.target.value; calc(); });
 $("n_W").addEventListener("input", e=>{ $("f_W").value=e.target.value; calc(); });
 $("ch_rect").onclick = ()=>setForme("rect");
-$("ch_forme").onclick = ()=>setForme("forme");
 $("ch_rond").onclick = ()=>setForme("rond");
 
 /* PANIER */
@@ -1251,7 +1248,7 @@ $("btn_add").onclick = ()=>{
   cart.push({
     nom: m.n, ep: $("f_ep").value,
     L: +$("f_L").value, W: +$("f_W").value, q: +$("f_qte").value||1,
-    forme: forme==="rect"?"rectangle":(forme==="rond"?"angles arrondis":"forme libre"),
+    forme: forme==="rond"?"angles arrondis":"rectangle",
     proc: p==="cut"?"découpe":(p==="print"?"impression UV":"découpe + impression"),
     total: parseFloat($("b_tot").textContent),
     poids: parseFloat($("b_pds").textContent)
