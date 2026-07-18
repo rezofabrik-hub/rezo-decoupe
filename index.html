@@ -833,42 +833,42 @@ const CAT = [
   eco:false},
 
  {f:"Plexi Marine UV", id:"pmma_marine_tr", n:"Plexi marine transparent", sw:"#C8E6F0",
-  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:0,
   ep:{5:52.00,6:64.00,8:85.00,10:108.00},
   use:"PMMA coulé traité anti-UV haute performance. Idéal hublots, pare-brise bateaux, vitrages cockpit. Résistance aux embruns et UV marins.",
   laserInfo:"✓ Compatible laser CO2. Traitement anti-UV spécial milieu marin. Chant poli brillant au laser.",
   eco:false, marine:true},
 
  {f:"Plexi Marine UV", id:"pmma_marine_gc", n:"Plexi marine gris clair", sw:"#C0C8CC",
-  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:0,
   ep:{5:55.00,6:68.00,8:89.00,10:113.00},
   use:"Teinte gris clair anti-UV. Réduit l'éblouissement, filtre les UV. Idéal capots, tableaux de bord, superstructures bateaux.",
   laserInfo:"✓ Compatible laser CO2. Filtration UV > 98%. Parfait pour les zones exposées en plein soleil.",
   eco:false, marine:true},
 
  {f:"Plexi Marine UV", id:"pmma_marine_gf", n:"Plexi marine gris foncé", sw:"#6B7880",
-  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:0,
   ep:{5:55.00,6:68.00,8:89.00,10:113.00},
   use:"Teinte gris foncé anti-UV. Forte réduction de l'éblouissement, intimité visuelle. Vitres latérales, cloisons cockpit.",
   laserInfo:"✓ Compatible laser CO2. Transmission lumineuse ~20%. Résistance aux embruns et UV marins.",
   eco:false, marine:true},
 
  {f:"Plexi Marine UV", id:"pmma_marine_mc", n:"Plexi marine marron clair", sw:"#B8865A",
-  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:0,
   ep:{5:55.00,6:68.00,8:89.00,10:113.00},
   use:"Teinte marron clair fumé anti-UV. Esthétique chaleureuse, très utilisé sur voiliers et bateaux de plaisance.",
   laserInfo:"✓ Compatible laser CO2. Couleur dans la masse, imputrescible, résistance UV marine.",
   eco:false, marine:true},
 
  {f:"Plexi Marine UV", id:"pmma_marine_mf", n:"Plexi marine marron foncé", sw:"#6B3A20",
-  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:0,
   ep:{5:55.00,6:68.00,8:89.00,10:113.00},
   use:"Teinte marron foncé anti-UV. Intimité maximale, aspect premium. Hublots, portes de cabine, vitres de poupe.",
   laserInfo:"✓ Compatible laser CO2. Transmission lumineuse ~10%. Spécial milieu marin et bâtiment.",
   eco:false, marine:true},
 
  {f:"Plexi Marine UV", id:"pmma_marine_bc", n:"Plexi marine bleu clair", sw:"#4A90C4",
-  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:0,
   ep:{5:55.00,6:68.00,8:89.00,10:113.00},
   use:"Teinte bleu clair anti-UV. Très prisé pour les bateaux de plaisance, verrières et pergolas. Bonne transmission lumineuse.",
   laserInfo:"✓ Compatible laser CO2. Couleur homogène dans la masse, résistance UV renforcée.",
@@ -1142,7 +1142,7 @@ function renderMarineMats(){
           <span class="compat-chip ok">Laser CO2</span>
           <span class="compat-chip ok">CNC</span>
           <span class="compat-chip ok">Anti-UV</span>
-          <span class="compat-chip ok">Extérieur</span>
+          <span class="compat-chip non">Pas d'impression</span>
         </div>
         <div class="mat-prix">Dès ${pmin.toFixed(2)} €/m² · épaisseurs : ${eps.join(", ")} mm</div>
       </div>
