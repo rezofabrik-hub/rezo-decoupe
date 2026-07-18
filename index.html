@@ -775,30 +775,48 @@ footer { background: #162D4A; color: rgba(255,255,255,.45); padding: 32px 0; fon
       <a href="#">Mentions légales</a>
       <a href="#contact">Contact</a>
     </div>
-    <span>Prototype · tarifs à valider avant mise en ligne</span>
+    <span>Tarifs revendeurs HT 2024 · TVA 20% en sus · frais de port à partir de 30 € HT</span>
   </div>
 </footer>
 
 <script>
 const CAT = [
- {f:"PVC expansé", id:"pvc_blanc", n:"PVC blanc", sw:"#F5F5F2",
+ {f:"PVC expansé", id:"pvc_5b", n:"PVC expansé 5mm brut", sw:"#F5F5F2",
   dens:600, cut:["scie","cnc"], print:1, laser:0, blanc:0,
-  ep:{1:4.06,2:4.83,3:5.98,5:9.71,10:19.98},
+  ep:{5:0}, tarif:"pvc_exp", variant:"5b",
   use:"Le classique de la signalétique. Léger, facile à coller, visser, peindre. Compatible CNC et impression UV.",
   laserInfo:"Ne passe PAS au laser CO2 (dégagement de chlore). Découpe CNC uniquement.",
   eco:true},
- {f:"PVC expansé", id:"pvc_noir", n:"PVC noir", sw:"#1C1C1C",
-  dens:600, cut:["scie","cnc"], print:1, laser:0, blanc:1,
-  ep:{3:8.26,5:13.21,10:25.59,19:41.65},
-  use:"PVC noir dans la masse, idéal fond de vitrine et cache-fixations.",
-  laserInfo:"Ne passe PAS au laser CO2. Découpe CNC uniquement.",
-  eco:true},
- {f:"PVC expansé", id:"pvc_xtra", n:"PVC recyclé XTRA", sw:"#EDEDE6",
+ {f:"PVC expansé", id:"pvc_5f", n:"PVC expansé 5mm filmé", sw:"#E8EAE0",
   dens:600, cut:["scie","cnc"], print:1, laser:0, blanc:0,
-  ep:{3:11.27,5:12.77,10:29.71},
-  use:"Noyau issu du recyclage, surface identique au blanc standard. Idéal pour les projets éco-responsables.",
-  laserInfo:"Ne passe PAS au laser. Découpe CNC uniquement.",
-  eco:true},
+  ep:{5:0}, tarif:"pvc_exp", variant:"5f",
+  use:"5 mm avec film protecteur de surface. Finition soignée, idéal enseignes et découpes propres.",
+  laserInfo:"Ne passe PAS au laser CO2. Découpe CNC uniquement.",
+  eco:false},
+ {f:"PVC expansé", id:"pvc_10b", n:"PVC expansé 10mm brut", sw:"#EDEDEA",
+  dens:600, cut:["scie","cnc"], print:1, laser:0, blanc:0,
+  ep:{10:0}, tarif:"pvc_exp", variant:"10b",
+  use:"10 mm — rigidité supérieure. Lettres volumiques, enseignes épaisses, supports structurels.",
+  laserInfo:"Ne passe PAS au laser CO2. Découpe CNC uniquement.",
+  eco:false},
+ {f:"PVC expansé", id:"pvc_10a", n:"PVC expansé 10mm adhésivé/peint", sw:"#D8D8D5",
+  dens:600, cut:["scie","cnc"], print:1, laser:0, blanc:1,
+  ep:{10:0}, tarif:"pvc_exp", variant:"10a",
+  use:"10 mm avec face adhésivée ou peinte. Prêt à poser directement sur façade ou vitrine.",
+  laserInfo:"Ne passe PAS au laser CO2. Découpe CNC uniquement.",
+  eco:false},
+ {f:"PVC expansé", id:"pvc_19b", n:"PVC expansé 19mm brut", sw:"#DCDCDA",
+  dens:600, cut:["scie","cnc"], print:1, laser:0, blanc:0,
+  ep:{19:0}, tarif:"pvc_exp", variant:"19b",
+  use:"19 mm haute rigidité. Lettres épaisses grand format, signalétique structurelle haut de gamme.",
+  laserInfo:"Ne passe PAS au laser CO2. Découpe CNC uniquement.",
+  eco:false},
+ {f:"PVC expansé", id:"pvc_19a", n:"PVC expansé 19mm adhésivé/peint", sw:"#CECECE",
+  dens:600, cut:["scie","cnc"], print:1, laser:0, blanc:1,
+  ep:{19:0}, tarif:"pvc_exp", variant:"19a",
+  use:"19 mm finition adhésivée ou peinte. Enseigne murale prête à installer, aspect premium.",
+  laserInfo:"Ne passe PAS au laser CO2. Découpe CNC uniquement.",
+  eco:false},
  {f:"Alu composite", id:"acp_eko", n:"Alu composite blanc", sw:"#F2F3F1",
   dens:1550, cut:["scie","cnc"], print:1, laser:0, blanc:0,
   ep:{3:12.45},
@@ -817,17 +835,23 @@ const CAT = [
   use:"22 teintes RAL laquées dans la masse. Précisez la référence couleur au panier.",
   laserInfo:"Ne passe PAS au laser. Découpe CNC uniquement.",
   eco:false},
- {f:"Plexi PMMA", id:"pmma_inco", n:"Plexi incolore", sw:"#DCE8EA",
+ {f:"Plexi PMMA", id:"pmma_inco", n:"Plexi incolore transparent", sw:"#DCE8EA",
   dens:1190, cut:["scie","cnc","laser"], print:1, laser:1, blanc:1,
-  ep:{3:18.90,4:23.45,5:29.31,6:30.66,8:46.90,10:58.62},
+  ep:{3:0,5:0,10:0}, tarif:"pmma",
   use:"Transparence parfaite, chant poli au laser CO2. Idéal vitrines, protections, présentoirs.",
   laserInfo:"✓ Compatible laser CO2 jusqu'à 10 mm. Chant sortant poli brillant sans aucune retouche.",
   eco:false},
  {f:"Plexi PMMA", id:"pmma_diff", n:"Plexi diffusant blanc", sw:"#F4F6F5",
   dens:1190, cut:["scie","cnc","laser"], print:1, laser:1, blanc:0,
-  ep:{3:20.88,4:27.84,5:34.80,10:69.61},
+  ep:{3:0,5:0,10:0}, tarif:"pmma",
   use:"Diffuse la lumière sans voir la source. Enseignes lumineuses, caissons rétroéclairés.",
   laserInfo:"✓ Compatible laser CO2. Idéal pour les enseignes LED découpées au laser.",
+  eco:false},
+ {f:"Plexi PMMA", id:"pmma_opaq", n:"Plexi blanc opaque", sw:"#F8F8F6",
+  dens:1190, cut:["scie","cnc","laser"], print:1, laser:1, blanc:0,
+  ep:{3:0,5:0,10:0}, tarif:"pmma",
+  use:"Blanc pur opaque, aspect premium. Lettrages, enseignes, objets déco. Chant net au laser CO2.",
+  laserInfo:"✓ Compatible laser CO2. Surface homogène, découpe nette, finition professionnelle.",
   eco:false},
  {f:"Polycarbonate", id:"poly", n:"Polycarbonate compact", sw:"#E2EBE8",
   dens:1200, cut:["scie","cnc"], print:1, laser:0, blanc:1,
@@ -846,6 +870,31 @@ const CAT = [
   ep:{3:12.00,5:16.00,8:22.00,12:30.00},
   use:"Plis apparents sur chant, très propre au laser. Objets déco, enseignes, jeux, découpes de forme.",
   laserInfo:"✓ Compatible laser CO2. Plis bouleau donnent un rendu chaleureux sur les chants découpés.",
+  eco:false},
+
+ {f:"PVC rétroéclairé", id:"pvc_r19_1", n:"PVC rétroéclairé 19mm 1 LED", sw:"#FFF5C8",
+  dens:600, cut:["scie","cnc"], print:0, laser:0, blanc:0,
+  ep:{19:0}, tarif:"pvc_retro", variant:"19_1",
+  use:"Caisson lumineux 19mm, 1 LED par lettre. Câble ~500mm intégré, transformateur 12V. Lettres lumineuses prêtes à brancher.",
+  laserInfo:"Ne passe PAS au laser. Découpe CNC uniquement. Câblage LED inclus dans le prix.",
+  eco:false},
+ {f:"PVC rétroéclairé", id:"pvc_r19_2", n:"PVC rétroéclairé 19mm 2 LEDs", sw:"#FFE87A",
+  dens:600, cut:["scie","cnc"], print:0, laser:0, blanc:0,
+  ep:{19:0}, tarif:"pvc_retro", variant:"19_2",
+  use:"19mm, 2 LEDs par lettre. Luminosité renforcée pour grands formats ou forte visibilité en journée.",
+  laserInfo:"Ne passe PAS au laser. Découpe CNC uniquement. Double câblage LED inclus.",
+  eco:false},
+ {f:"PVC rétroéclairé", id:"pvc_r30_1", n:"PVC rétroéclairé 30mm 1 LED", sw:"#FFF2A0",
+  dens:600, cut:["scie","cnc"], print:0, laser:0, blanc:0,
+  ep:{30:0}, tarif:"pvc_retro", variant:"30_1",
+  use:"Caisson 30mm volume premium, 1 LED. Profil épais et esthétique, lettre imposante.",
+  laserInfo:"Ne passe PAS au laser. Découpe CNC uniquement.",
+  eco:false},
+ {f:"PVC rétroéclairé", id:"pvc_r30_2", n:"PVC rétroéclairé 30mm 2 LEDs", sw:"#FFEC60",
+  dens:600, cut:["scie","cnc"], print:0, laser:0, blanc:0,
+  ep:{30:0}, tarif:"pvc_retro", variant:"30_2",
+  use:"30mm, 2 LEDs — luminosité maximale. Vitrines, enseignes haut de gamme, visibilité maximale.",
+  laserInfo:"Ne passe PAS au laser. Découpe CNC uniquement. Double câblage LED inclus.",
   eco:false},
 
  {f:"Plexi Marine UV", id:"pmma_marine_tr", n:"Plexi marine transparent", sw:"#C8E6F0",
@@ -893,6 +942,76 @@ const CAT = [
 
 const PARAM = { coeff:{10:4.0,20:3.2,40:2.8,70:2.4,999:2.2}, forfait:4.0, taux:60, encre:22, transport:1.05, tva:1.2 };
 const VIT_LASER = {3:20,4:16,5:12,6:10,8:7,10:5,12:3.5,15:2.5,19:2};
+
+// Tarifs revendeurs HT 2024 — prix par mètre linéaire à la hauteur donnée
+const TARIFS = {
+  pmma: {
+    100:{3:5,5:5,10:6},    120:{3:5,5:6,10:7},    150:{3:6,5:6,10:7},
+    200:{3:6,5:7,10:9},    250:{3:7,5:8,10:12},   300:{3:8,5:10,10:15},
+    350:{3:9,5:12,10:19},  400:{3:11,5:14,10:23},  450:{3:12,5:16,10:28},
+    500:{3:14,5:19,10:33}, 550:{3:16,5:22,10:40},  600:{3:18,5:25,10:46},
+    700:{3:23,5:33,10:61}, 800:{3:29,5:42,10:78},  900:{3:35,5:51,10:98},
+    1000:{3:42,5:62,10:119},1100:{3:50,5:74,10:143},1200:{3:59,5:87,10:170},
+    1300:{3:68,5:102,10:198},1400:{3:78,5:117,10:229},1500:{3:89,5:134,10:262}
+  },
+  pvc_exp: {
+    100: {"5b":4,"5f":6,"10b":4,"10a":6.5,"19b":6,"19a":9},
+    120: {"5b":4.5,"5f":6.5,"10b":4.5,"10a":7,"19b":7,"19a":10},
+    150: {"5b":5,"5f":5,"10b":7,"10a":7.5,"19b":8,"19a":12},
+    200: {"5b":5.5,"5f":7.5,"10b":5.5,"10a":8,"19b":11,"19a":14},
+    250: {"5b":6,"5f":9,"10b":7,"10a":10,"19b":15,"19a":17},
+    300: {"5b":7,"5f":11,"10b":8.5,"10a":12,"19b":19,"19a":20},
+    350: {"5b":8,"5f":12,"10b":10,"10a":14,"19b":22,"19a":25},
+    400: {"5b":11,"5f":13,"10b":15,"10a":17,"19b":26,"19a":30},
+    450: {"5b":13,"5f":15,"10b":17,"10a":20,"19b":30,"19a":35},
+    500: {"5b":15,"5f":20,"10b":18.5,"10a":22,"19b":36,"19a":40},
+    550: {"5b":17,"5f":22,"10b":21,"10a":25,"19b":40,"19a":48},
+    600: {"5b":19,"5f":28,"10b":23,"10a":30,"19b":45,"19a":52},
+    700: {"5b":24,"5f":30,"10b":27,"10a":35,"19b":60,"19a":60},
+    800: {"5b":30,"5f":32,"10b":40,"10a":45,"19b":70,"19a":78},
+    900: {"5b":35,"5f":45,"10b":40,"10a":55,"19b":80,"19a":90},
+    1000:{"5b":40,"5f":55,"10b":45,"10a":68,"19b":90,"19a":100}
+  },
+  pvc_retro: {
+    150: {"19_1":51,"19_2":null,"30_1":53,"30_2":null},
+    200: {"19_1":53,"19_2":null,"30_1":55,"30_2":null},
+    250: {"19_1":57,"19_2":null,"30_1":61,"30_2":null},
+    300: {"19_1":59,"19_2":82,"30_1":66,"30_2":88},
+    350: {"19_1":66,"19_2":92,"30_1":75,"30_2":101},
+    400: {"19_1":78,"19_2":107,"30_1":89,"30_2":118},
+    450: {"19_1":90,"19_2":124,"30_1":103,"30_2":138},
+    500: {"19_1":99,"19_2":138,"30_1":116,"30_2":154},
+    550: {"19_1":113,"19_2":154,"30_1":133,"30_2":174},
+    600: {"19_1":139,"19_2":188,"30_1":156,"30_2":206},
+    700: {"19_1":153,"19_2":206,"30_1":185,"30_2":238},
+    800: {"19_1":183,"19_2":241,"30_1":224,"30_2":283},
+    900: {"19_1":215,"19_2":282,"30_1":268,"30_2":336},
+    1000:{"19_1":246,"19_2":321,"30_1":312,"30_2":387},
+    1100:{"19_1":285,"19_2":369,"30_1":365,"30_2":449},
+    1200:{"19_1":325,"19_2":416,"30_1":419,"30_2":509},
+    1300:{"19_1":367,"19_2":465,"30_1":null,"30_2":null},
+    1400:{"19_1":411,"19_2":516,"30_1":null,"30_2":null},
+    1500:{"19_1":458,"19_2":571,"30_1":null,"30_2":null}
+  }
+};
+
+function lookupTarif(m, H) {
+  const tbl = TARIFS[m.tarif];
+  if (!tbl) return null;
+  const keys = Object.keys(tbl).map(Number).sort((a,b) => a-b);
+  const bracket = keys.find(k => k >= H) || keys[keys.length-1];
+  const col = m.tarif === "pmma" ? String(parseFloat($("f_ep").value)) : m.variant;
+  const v = tbl[bracket] ? tbl[bracket][col] : null;
+  return (v != null && v > 0) ? v : null;
+}
+
+function tarifMinPrice(m) {
+  const tbl = TARIFS[m.tarif];
+  if (!tbl) return 0;
+  const col = m.tarif === "pmma" ? "3" : m.variant;
+  const prices = Object.values(tbl).map(row => row[col]).filter(v => v != null && v > 0);
+  return prices.length ? Math.min(...prices) : 0;
+}
 const $ = id => document.getElementById(id);
 let forme = "rect";
 
@@ -972,51 +1091,76 @@ function calc(){
 
   if(!m){ $("p_ht").innerHTML="—<small> HT</small>"; $("btn_add").disabled=true; return; }
 
-  const ep = parseFloat($("f_ep").value), pa = m.ep[$("f_ep").value]*PARAM.transport;
+  const ep = parseFloat($("f_ep").value);
   const p = proc();
-  const surfR = (L*W)/1e6, surf = Math.max(surfR, 0.03);
+  const surfR = (L*W)/1e6;
+  const marine = m.marine === true;
+  const livraisonHT = marine ? 70 : 30;
+  const poidsMax = marine ? 30 : 15;
+  const poids = surfR * (ep/1000) * m.dens * q;
+
+  let pu=0, cMat=0, cCut=0, cPrint=0, cInk=0, cFin=0, forf=0, rem=0, mode="";
   let peri = 2*(L+W)/1000;
   if(forme==="forme") peri*=1.8; else if(forme==="rond") peri*=1.12;
 
-  const cMat = surf*pa*coeff(pa);
+  if (m.tarif) {
+    // Tarif 2024 HT — prix par mètre linéaire selon la hauteur
+    const H = Math.max(L, W), wDim = Math.min(L, W);
+    const pricePerM = lookupTarif(m, H);
+    if (pricePerM === null) {
+      $("p_ht").innerHTML = "Sur devis<small> HT</small>";
+      $("p_ttc").textContent = "Hauteur hors tableau — contactez-nous";
+      $("btn_add").disabled = true;
+      return;
+    }
+    cMat = pricePerM * (wDim / 1000);
+    mode = m.tarif === "pvc_retro" ? "rétroéclairé" : "numérique";
 
-  let cCut=0, tCut=0, mode="";
-  if(p !== "print"){
-    const laserOK = m.laser && ep<=(m.f==="Bois"?18:10) && L<=600 && W<=308;
-    const useLaser = laserOK && (forme==="forme" || m.f==="Plexi PMMA");
-    if(useLaser){ mode="laser"; tCut=1.2+(peri*1000)/(VIT_LASER[ep]||4)/60; }
-    else { mode="numérique"; tCut=0.8+(peri*1000)/(ep>10?28:45)/60; }
-    cCut = tCut*PARAM.taux/60;
+    if (m.print && p !== "cut") {
+      const surf = Math.max(surfR, 0.01);
+      let pass = 1+($("o_blanc").checked?1:0)+($("o_vernis").checked?0.5:0);
+      if($("o_rv").checked) pass*=2;
+      const cv = +$("f_couv").value/100;
+      cPrint = (1.5+surf*70*pass*(cv+0.35))*PARAM.taux/60;
+      cInk = surf*PARAM.encre*pass*cv;
+    }
+    if($("o_chant").checked) cFin += peri*0.9;
+    cFin += (+$("f_perc").value)*0.8;
+    rem = q>=50?.28:q>=25?.20:q>=10?.14:q>=5?.07:0;
+    forf = PARAM.forfait/(q>=5?Math.min(q/2,5):1);
+    pu = cMat*(1-rem) + (cPrint+cInk)*(1-rem) + cFin + forf;
+
+  } else {
+    // Tarif matière au m²
+    const pa = m.ep[$("f_ep").value]*PARAM.transport;
+    const surf = Math.max(surfR, 0.03);
+    cMat = surf*pa*coeff(pa);
+    if(p !== "print"){
+      const laserOK = m.laser && ep<=(m.f==="Bois"?18:10) && L<=600 && W<=308;
+      const useLaser = laserOK && (forme==="forme" || m.f==="Plexi PMMA");
+      if(useLaser){ mode="laser"; const tCut=1.2+(peri*1000)/(VIT_LASER[ep]||4)/60; cCut=tCut*PARAM.taux/60; }
+      else { mode="numérique"; const tCut=0.8+(peri*1000)/(ep>10?28:45)/60; cCut=tCut*PARAM.taux/60; }
+    }
+    if(p !== "cut"){
+      let pass=1+($("o_blanc").checked?1:0)+($("o_vernis").checked?0.5:0);
+      if($("o_rv").checked) pass*=2;
+      const cv = +$("f_couv").value/100;
+      cPrint = (1.5+surf*70*pass*(cv+0.35))*PARAM.taux/60;
+      cInk = surf*PARAM.encre*pass*cv;
+    }
+    if($("o_chant").checked) cFin += peri*0.9;
+    cFin += (+$("f_perc").value)*0.8;
+    rem = q>=50?.28:q>=25?.20:q>=10?.14:q>=5?.07:0;
+    forf = PARAM.forfait/(q>=5?Math.min(q/2,5):1);
+    pu = cMat+(cCut+cPrint)*(1-rem)+cInk+cFin+forf;
   }
 
-  let cPrint=0, cInk=0;
-  if(p !== "cut"){
-    let pass=1+($("o_blanc").checked?1:0)+($("o_vernis").checked?0.5:0);
-    if($("o_rv").checked) pass*=2;
-    const cv = +$("f_couv").value/100;
-    cPrint = (1.5+surf*70*pass*(cv+0.35))*PARAM.taux/60;
-    cInk = surf*PARAM.encre*pass*cv;
-  }
-
-  let cFin = 0;
-  if($("o_chant").checked) cFin += peri*0.9;
-  cFin += (+$("f_perc").value)*0.8;
-
-  const rem = q>=50?.28:q>=25?.20:q>=10?.14:q>=5?.07:0;
-  const forf = PARAM.forfait/(q>=5?Math.min(q/2,5):1);
-  const pu = cMat+(cCut+cPrint)*(1-rem)+cInk+cFin+forf;
-  const marine = m.marine === true;
-  const tot = pu*q, poids = surf*(ep/1000)*m.dens*q;
-
-  // Livraison forfaitaire : 70€ HT marine, 30€ HT standard
-  const livraisonHT = marine ? 70 : 30;
-  // Limite poids : 30kg marine, 15kg standard
-  const poidsMax = marine ? 30 : 15;
+  const tot = pu*q;
 
   $("p_ht").innerHTML = pu.toFixed(2).replace(".",",")+" €<small> HT / pièce</small>";
   $("p_ttc").textContent = (pu*PARAM.tva).toFixed(2).replace(".",",")+" € TTC"+(rem?"  ·  remise "+Math.round(rem*100)+" % appliquée":"");
   $("b_mat").textContent = cMat.toFixed(2)+" €";
-  $("b_cut").textContent = cCut ? cCut.toFixed(2)+" € ("+mode+")" : "—";
+  $("b_cut").textContent = cCut ? cCut.toFixed(2)+" € ("+mode+")" : mode ? "Inclus ("+mode+")" : "—";
   $("b_print").textContent = cPrint ? cPrint.toFixed(2)+" €" : "—";
   $("b_ink").textContent = cInk ? cInk.toFixed(2)+" €" : "—";
   $("b_fin").textContent = cFin ? cFin.toFixed(2)+" €" : "—";
@@ -1029,24 +1173,27 @@ function calc(){
     +" · livraison "+(marine?"70 € HT — emballage renforcé nautisme":"30 € HT");
 
   const n = $("p_notice"); let msg="", stop=false;
-  const ratio = Math.max(L,W)/Math.min(L,W);
-  if(poids > poidsMax){ msg="Poids total "+poids.toFixed(1)+" kg dépasse la limite de "+poidsMax+" kg par commande"+(marine?" (nautisme)":" (standard"+(marine?"":"")+").")+". Fractionnez votre commande."; stop=true; }
+  const ratio = L && W ? Math.max(L,W)/Math.min(L,W) : 1;
+  if(poids > poidsMax){ msg="Poids total "+poids.toFixed(1)+" kg dépasse la limite de "+poidsMax+" kg par commande"+(marine?" (nautisme).":" (standard).")+" Fractionnez votre commande."; stop=true; }
   else if(ratio>20){ msg="Ratio "+ratio.toFixed(0)+":1 — trop élancé. Demandez-nous un devis."; stop=true; }
   else if(p!=="cut" && m.blanc && !$("o_blanc").checked){ msg="Support foncé ou transparent : sans fond blanc, les couleurs seront ternes."; }
   else if(p!=="cut" && (L>420||W>330)){ msg="Le plateau d'impression fait 420 × 330 mm. Au-delà, passez en découpe seule."; }
-  else if(surfR<0.03){ msg="Surface inférieure au minimum facturé de 0,03 m²."; }
+  else if(surfR>0 && surfR<0.01){ msg="Surface trop petite. Minimum recommandé : 100 × 100 mm."; }
   n.style.display = msg?"block":"none"; n.textContent = msg; n.className = "notice-box"+(stop?" stop":"");
   $("btn_add").disabled = stop;
 }
 
 function renderMats(){
-  $("mat-grid").innerHTML = CAT.map(m => {
+  $("mat-grid").innerHTML = CAT.filter(m => !m.marine).map(m => {
     const eps = Object.keys(m.ep);
-    const pmin = Math.min(...Object.values(m.ep));
+    const pmin = m.tarif ? tarifMinPrice(m) : Math.min(...Object.values(m.ep).filter(v=>v>0));
     const laserBadge = m.laser
       ? '<span class="badge badge-ok">✓ Laser CO2</span>'
       : '<span class="badge badge-non">✗ Laser</span>';
     const ecoBadge = m.eco ? '<span class="badge badge-eco">♻️ Recyclé</span>' : '';
+    const prixLine = m.tarif
+      ? `Tarif 2024 HT · dès ${pmin.toFixed(0)} €/m lin.`
+      : `Dès ${pmin.toFixed(2)} €/m² · ép. ${eps.join(", ")} mm`;
     return `<article class="mat-card" onclick="selectMat('${m.id}')">
       <div class="mat-photo">
         <div class="photo-bg" style="background:linear-gradient(135deg, ${m.sw} 0%, ${darken(m.sw)} 100%)"></div>
@@ -1060,7 +1207,7 @@ function renderMats(){
           ${m.laser ? '<span class="compat-chip ok">Laser CO2</span>' : '<span class="compat-chip non">Laser CO2</span>'}
           ${m.print ? '<span class="compat-chip ok">Impression UV</span>' : ''}
         </div>
-        <div class="mat-prix">Dès ${pmin.toFixed(2)} €/m² · épaisseurs : ${eps.join(", ")} mm</div>
+        <div class="mat-prix">${prixLine}</div>
       </div>
     </article>`;
   }).join("");
@@ -1175,7 +1322,7 @@ function renderMarineMats(){
           <span class="compat-chip ok">Anti-UV</span>
           <span class="compat-chip non">Pas d'impression</span>
         </div>
-        <div class="mat-prix">Dès ${pmin.toFixed(2)} €/m² · épaisseurs : ${eps.join(", ")} mm</div>
+        <div class="mat-prix">Dès ${pmin.toFixed(2)} €/m² · ép. ${eps.join(", ")} mm</div>
       </div>
     </article>`;
   }).join("");
