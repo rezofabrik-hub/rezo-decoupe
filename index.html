@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rezo Découpe — Matière première pour laser & CNC | PVC, Plexi, Alu, Bois sur mesure</title>
 <meta name="description" content="Vous avez une machine laser ou une CNC ? Rezo Découpe vous fournit vos panneaux découpés au format, en petite ou grande quantité. PVC, plexi, alu composite, bois, polycarbonate. Matières issues du recyclage. Expédition France entière depuis Canet-en-Roussillon.">
-<meta name="keywords" content="panneau découpe laser, matière CNC, PVC découpe laser, plexi PMMA laser, alu composite CNC, fournisseur matière laser, petite quantité, format sur mesure, revendeur matière laser">
+<meta name="keywords" content="panneau découpe laser, matière CNC, PVC découpe laser, plexi PMMA laser, alu composite CNC, fournisseur matière laser, petite quantité, format sur mesure, revendeur matière laser, plexi nautisme, plexi bateau, polycarbonate marine, vitre bateau sur mesure, plexi UV marine, hublot bateau, pare-brise bateau, plexi traité UV, vitrage bâtiment, verrière polymère">
 <meta property="og:title" content="Rezo Découpe — Matière pour laser & CNC">
 <meta property="og:description" content="Panneaux découpés à vos cotes pour vos machines laser et CNC. Petites et grandes quantités, matières recyclées, expédition France entière.">
 <meta property="og:type" content="website">
@@ -289,6 +289,28 @@ footer { background: #162D4A; color: rgba(255,255,255,.45); padding: 32px 0; fon
 .foot-links a { color: rgba(255,255,255,.4); }
 .foot-links a:hover { color: rgba(255,255,255,.8); }
 
+/* NAUTISME */
+#nautisme { padding: 72px 0; background: linear-gradient(135deg, #EFF8FF 0%, #F0F9FF 60%, #E0F2FE 100%); border-top: 1px solid #BAE6FD; }
+.naut-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 56px; }
+@media(max-width:780px){ .naut-hero { grid-template-columns: 1fr; } }
+.naut-badge { display: inline-flex; align-items: center; gap: 6px; background: #0EA5E9; color: #fff; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 20px; margin-bottom: 14px; letter-spacing: .04em; }
+.naut-stats { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 28px; }
+.naut-stat { background: var(--blanc); border: 1px solid #BAE6FD; border-radius: var(--r); padding: 14px 18px; }
+.naut-stat b { display: block; font-size: 22px; font-weight: 800; color: #0284C7; }
+.naut-stat span { font-size: 12px; color: var(--doux); }
+.naut-usages { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; }
+.naut-usage { background: var(--blanc); border: 1px solid #BAE6FD; border-radius: 10px; padding: 18px; }
+.naut-usage .icon { font-size: 26px; margin-bottom: 8px; }
+.naut-usage h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: #0C4A6E; }
+.naut-usage p { font-size: 13px; color: var(--doux); line-height: 1.6; }
+
+.badge-marine { background: #0EA5E9; color: #fff; }
+.mat-card.marine-card { border: 1px solid #BAE6FD; }
+.mat-card.marine-card:hover { border-color: #0EA5E9; }
+
+/* couleurs teintées pour les swatches plexi marine */
+.swatch-marine { position: absolute; inset: 0; opacity: .35; }
+
 :focus-visible { outline: 2px solid var(--bleu); outline-offset: 2px; }
 @media(prefers-reduced-motion:reduce){ * { transition: none !important; scroll-behavior: auto; } }
 </style>
@@ -306,6 +328,7 @@ footer { background: #162D4A; color: rgba(255,255,255,.45); padding: 32px 0; fon
     </a>
     <nav>
       <a href="#matieres">Matières</a>
+      <a href="#nautisme">⚓ Nautisme</a>
       <a href="#configurateur">Configurateur</a>
       <a href="#avantages">Pourquoi nous</a>
       <a href="#livraison">Livraison</a>
@@ -518,6 +541,64 @@ footer { background: #162D4A; color: rgba(255,255,255,.45); padding: 32px 0; fon
 
         <button class="btn-panier" id="btn_add">Ajouter au panier</button>
         <div class="delai-note" id="b_delai">Fabrication 48 h · expédition France entière</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAUTISME & BÂTIMENT -->
+<section id="nautisme">
+  <div class="wrap">
+    <div class="naut-hero">
+      <div>
+        <span class="naut-badge">⚓ Nautisme &amp; Bâtiment</span>
+        <h2>Plexi traité UV pour la mer et le bâtiment</h2>
+        <p style="color:var(--doux);font-size:16px;margin-top:14px;line-height:1.7">Nos plexi marine sont des PMMA coulés avec traitement anti-UV haute performance. Ils résistent aux embruns, aux UV marins et aux chocs thermiques. Disponibles en 6 teintes, épaisseurs 5 à 10 mm, découpés exactement à vos cotes.</p>
+        <div class="naut-stats">
+          <div class="naut-stat"><b>&gt; 98 %</b><span>filtration UV</span></div>
+          <div class="naut-stat"><b>5 à 10 mm</b><span>épaisseurs dispo</span></div>
+          <div class="naut-stat"><b>6 teintes</b><span>dont transparent</span></div>
+        </div>
+      </div>
+      <div class="naut-usages">
+        <div class="naut-usage">
+          <div class="icon">🚢</div>
+          <h4>Hublots &amp; pare-brise</h4>
+          <p>Remplacement ou fabrication sur mesure pour voiliers, bateaux à moteur, semi-rigides.</p>
+        </div>
+        <div class="naut-usage">
+          <div class="icon">⛵</div>
+          <h4>Cockpit &amp; capots</h4>
+          <p>Vitres latérales, cloisons, capots moteur, tableaux de bord.</p>
+        </div>
+        <div class="naut-usage">
+          <div class="icon">🏗️</div>
+          <h4>Verrières &amp; pergolas</h4>
+          <p>Couvertures de terrasse, claustras, brise-vue, vitrages de véranda.</p>
+        </div>
+        <div class="naut-usage">
+          <div class="icon">🏢</div>
+          <h4>Façades &amp; signalétique</h4>
+          <p>Enseignes extérieures, vitrines de magasin, protections UV bâtiment.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grille des 6 teintes -->
+    <div class="sec-head" style="margin-bottom:28px">
+      <h3 style="font-size:20px">Les 6 teintes disponibles — épaisseurs 5, 6, 8 et 10 mm</h3>
+    </div>
+    <div class="mat-grid" id="mat-grid-marine"></div>
+
+    <div style="background:var(--blanc);border:1px solid #BAE6FD;border-radius:10px;padding:22px 24px;margin-top:28px">
+      <p style="font-size:14px;color:#0C4A6E;font-weight:600;margin-bottom:6px">💡 Comment choisir votre teinte ?</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:10px;font-size:13.5px;color:var(--doux)">
+        <div><b style="color:var(--texte)">Transparent</b> — hublots, vitrages, quand la visibilité est prioritaire</div>
+        <div><b style="color:var(--texte)">Gris clair</b> — réduction éblouissement, bon compromis lumière/protection</div>
+        <div><b style="color:var(--texte)">Gris foncé</b> — forte intimité, cabines, vitres latérales</div>
+        <div><b style="color:var(--texte)">Marron clair</b> — esthétique voiliers, teinte chaude et naturelle</div>
+        <div><b style="color:var(--texte)">Marron foncé</b> — aspect premium, hublots de cabine</div>
+        <div><b style="color:var(--texte)">Bleu clair</b> — pergolas, verrières, bateaux de plaisance</div>
       </div>
     </div>
   </div>
@@ -749,7 +830,49 @@ const CAT = [
   ep:{3:12.00,5:16.00,8:22.00,12:30.00},
   use:"Plis apparents sur chant, très propre au laser. Objets déco, enseignes, jeux, découpes de forme.",
   laserInfo:"✓ Compatible laser CO2. Plis bouleau donnent un rendu chaleureux sur les chants découpés.",
-  eco:false}
+  eco:false},
+
+ {f:"Plexi Marine UV", id:"pmma_marine_tr", n:"Plexi marine transparent", sw:"#C8E6F0",
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  ep:{5:52.00,6:64.00,8:85.00,10:108.00},
+  use:"PMMA coulé traité anti-UV haute performance. Idéal hublots, pare-brise bateaux, vitrages cockpit. Résistance aux embruns et UV marins.",
+  laserInfo:"✓ Compatible laser CO2. Traitement anti-UV spécial milieu marin. Chant poli brillant au laser.",
+  eco:false, marine:true},
+
+ {f:"Plexi Marine UV", id:"pmma_marine_gc", n:"Plexi marine gris clair", sw:"#C0C8CC",
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  ep:{5:55.00,6:68.00,8:89.00,10:113.00},
+  use:"Teinte gris clair anti-UV. Réduit l'éblouissement, filtre les UV. Idéal capots, tableaux de bord, superstructures bateaux.",
+  laserInfo:"✓ Compatible laser CO2. Filtration UV > 98%. Parfait pour les zones exposées en plein soleil.",
+  eco:false, marine:true},
+
+ {f:"Plexi Marine UV", id:"pmma_marine_gf", n:"Plexi marine gris foncé", sw:"#6B7880",
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  ep:{5:55.00,6:68.00,8:89.00,10:113.00},
+  use:"Teinte gris foncé anti-UV. Forte réduction de l'éblouissement, intimité visuelle. Vitres latérales, cloisons cockpit.",
+  laserInfo:"✓ Compatible laser CO2. Transmission lumineuse ~20%. Résistance aux embruns et UV marins.",
+  eco:false, marine:true},
+
+ {f:"Plexi Marine UV", id:"pmma_marine_mc", n:"Plexi marine marron clair", sw:"#B8865A",
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  ep:{5:55.00,6:68.00,8:89.00,10:113.00},
+  use:"Teinte marron clair fumé anti-UV. Esthétique chaleureuse, très utilisé sur voiliers et bateaux de plaisance.",
+  laserInfo:"✓ Compatible laser CO2. Couleur dans la masse, imputrescible, résistance UV marine.",
+  eco:false, marine:true},
+
+ {f:"Plexi Marine UV", id:"pmma_marine_mf", n:"Plexi marine marron foncé", sw:"#6B3A20",
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  ep:{5:55.00,6:68.00,8:89.00,10:113.00},
+  use:"Teinte marron foncé anti-UV. Intimité maximale, aspect premium. Hublots, portes de cabine, vitres de poupe.",
+  laserInfo:"✓ Compatible laser CO2. Transmission lumineuse ~10%. Spécial milieu marin et bâtiment.",
+  eco:false, marine:true},
+
+ {f:"Plexi Marine UV", id:"pmma_marine_bc", n:"Plexi marine bleu clair", sw:"#4A90C4",
+  dens:1190, cut:["scie","cnc","laser"], print:0, laser:1, blanc:1,
+  ep:{5:55.00,6:68.00,8:89.00,10:113.00},
+  use:"Teinte bleu clair anti-UV. Très prisé pour les bateaux de plaisance, verrières et pergolas. Bonne transmission lumineuse.",
+  laserInfo:"✓ Compatible laser CO2. Couleur homogène dans la masse, résistance UV renforcée.",
+  eco:false, marine:true}
 ];
 
 const PARAM = { coeff:{10:4.0,20:3.2,40:2.8,70:2.4,999:2.2}, forfait:4.0, taux:60, encre:22, transport:1.05, tva:1.2 };
@@ -997,8 +1120,39 @@ $("order").addEventListener("submit", async e=>{
   }
 });
 
+function renderMarineMats(){
+  const el = document.getElementById("mat-grid-marine");
+  if(!el) return;
+  const marines = CAT.filter(m => m.marine);
+  el.innerHTML = marines.map(m => {
+    const eps = Object.keys(m.ep);
+    const pmin = Math.min(...Object.values(m.ep));
+    return `<article class="mat-card marine-card" onclick="selectMat('${m.id}')">
+      <div class="mat-photo">
+        <div class="photo-bg" style="background:linear-gradient(135deg, ${m.sw} 0%, ${darken(m.sw)} 100%); opacity:0.85"></div>
+        <div class="mat-badges">
+          <span class="badge badge-marine">⚓ Marine UV</span>
+          <span class="badge badge-ok">✓ Laser CO2</span>
+        </div>
+      </div>
+      <div class="mat-info">
+        <h3>${m.n}</h3>
+        <p class="mat-desc">${m.use}</p>
+        <div class="mat-compat">
+          <span class="compat-chip ok">Laser CO2</span>
+          <span class="compat-chip ok">CNC</span>
+          <span class="compat-chip ok">Anti-UV</span>
+          <span class="compat-chip ok">Extérieur</span>
+        </div>
+        <div class="mat-prix">Dès ${pmin.toFixed(2)} €/m² · épaisseurs : ${eps.join(", ")} mm</div>
+      </div>
+    </article>`;
+  }).join("");
+}
+
 renderCart();
 renderMats();
+renderMarineMats();
 fillFam(); limits(); calc();
 </script>
 </body>
